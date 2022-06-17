@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spid3r hack dạo</title>
+    <link>/</link>
+    <description>Recent content on Spid3r hack dạo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 16 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Writeups Access Denied CTF 2022</title>
+      <link>/posts/access-denied-ctf-2022/</link>
+      <pubDate>Thu, 16 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/access-denied-ctf-2022/</guid>
+      <description>Thu, 09 June 2022, 23:30 SST — Sat, 11 June 2022, 23:30 SST - On-line
+Dưới đây là các bài mình làm được trong cuộc thi lần này
+MISC [Shark1] Ở bài misc đầu tiên, chúng ta nhận được 1 file .pcapng tiến hành mở file bằng wireshark, ta thu được
+Mình kiểm tra 1 vài TCP Protocol thì nhận được
+Nên mình quyết định follow TCP (Follow &amp;ndash;&amp;gt; TCP Stream)</description>
+    </item>
+    
+    <item>
+      <title>Thông tin thằng admin</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Các bạn nhìn cũng có thể đoán ra thằng admin là sinh viên trường nào. Thật đáng thương.
+Nhưng biết thế nào được bây giờ, dù đáng thương thế nào cũng không thể bằng fan MU được nên nó tự nhủ luôn phải cố gắng hơn nữa thì mới thành công được
+==&amp;gt; Mục tiêu hoàn thành 300 bài code thiếu nhi trong năm 2022 (Không xong để năm kế)</description>
+    </item>
+    
+  </channel>
+</rss>
