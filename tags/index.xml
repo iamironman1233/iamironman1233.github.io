@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Tags on </title>
-        <link>/tags/</link>
-        <description>Recent content in Tags on </description>
+        <title>Tags on Spid3r hack dạo</title>
+        <link>https://hathai25.github.io/tags/</link>
+        <description>Recent content in Tags on Spid3r hack dạo</description>
         <generator>Hugo -- gohugo.io</generator>
-        <lastBuildDate>Fri, 17 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>privacy</title>
-        <link>/tags/privacy/</link>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 17 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hathai25.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CTF</title>
+        <link>https://hathai25.github.io/tags/ctf/</link>
         <pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/privacy/</guid>
+        <guid>https://hathai25.github.io/tags/ctf/</guid>
         <description></description>
         </item>
         <item>
-        <title>shortcodes</title>
-        <link>/tags/shortcodes/</link>
+        <title>Writeup</title>
+        <link>https://hathai25.github.io/tags/writeup/</link>
         <pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>/tags/shortcodes/</guid>
+        <guid>https://hathai25.github.io/tags/writeup/</guid>
         <description></description>
         </item>
         
