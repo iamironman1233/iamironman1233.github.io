@@ -50,43 +50,19 @@ Nhưng ít nhất nó còn may mắn hơn fan MU - đáy xã hội, nên nó t�
 &lt;h2 id=&#34;misc&#34;&gt;MISC&lt;/h2&gt;
 &lt;h3 id=&#34;shark1&#34;&gt;[Shark1]&lt;/h3&gt;
 &lt;p&gt;Ở bài misc đầu tiên, chúng ta nhận được 1 file .pcapng tiến hành mở file bằng wireshark, ta thu được&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/https:/i.imgur.com/QFViiy2.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/QFViiy2.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Mình kiểm tra 1 vài TCP Protocol thì nhận được&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/https:/i.imgur.com/ID79OSC.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/ID79OSC.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Nên mình quyết định follow TCP (Follow &amp;ndash;&amp;gt; TCP Stream)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/https:/i.imgur.com/tCFc5Kb.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/tCFc5Kb.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;/a&gt;
 Vậy là chúng ta sẽ phải biến đổi cụm flag kia thông qua XOR với xor key = 80
 Sử dụng trang &lt;a class=&#34;link&#34; href=&#34;https://cyberchef.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;CyberChef&lt;/a&gt; và điền các thông số vào&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/https:/i.imgur.com/DszMPKQ.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/DszMPKQ.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h5 id=&#34;---flag-accessdeniedw1r3sh4rk_b3st_f0r_p4ck3t_sn1ff1ng_9fc3841b1&#34;&gt;&amp;ndash;&amp;gt; &lt;em&gt;flag: accessdenied{w1r3sh4rk_b3st_f0r_p4ck3t_sn1ff1ng_9fc3841b1}&lt;/em&gt;&lt;/h5&gt;
 &lt;h3 id=&#34;bobs-favourite-number&#34;&gt;[Bobs Favourite Number]&lt;/h3&gt;
 &lt;p&gt;Dữ kiện:&lt;/p&gt;
@@ -1090,51 +1066,21 @@ int main()
 &lt;h3 id=&#34;enormous&#34;&gt;[enormous]&lt;/h3&gt;
 &lt;p&gt;Ở bài này thì đơn giản ở chỗ (hoặc là mình bị lừa vì mình không test flag được) chúng ta sử dụng &lt;strong&gt;IDA&lt;/strong&gt; (bản nào cũng được nhưng phải là bản thích hợp :&amp;gt;) để tìm ra flag 1 cách dễ dàng.&lt;/p&gt;
 &lt;h4 id=&#34;check-function-trong-ida&#34;&gt;Check function trong IDA&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;/https:/i.imgur.com/05vJL5k.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/05vJL5k.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Dễ thấy trong mục function không có main nên mình cũng hơi mông lung 1 chút trong việc suy nghĩ liệu hàm main có bị ẩn đi hay không và nếu ẩn đi thì làm thế nào để mở được.&lt;/p&gt;
 &lt;p&gt;Quay lại đề bài 1 chút, để ý rằng đề bài có nhắc đến &lt;code&gt;see the number&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/https:/i.imgur.com/TnCTZ7a.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/TnCTZ7a.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Lúc đầu mình cũng không để ý lắm tới khi sử dụng lệnh &lt;code&gt;strings enormous&lt;/code&gt; và hiện ra 1 loạt các dòng số và chữ&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/https:/i.imgur.com/UISVpGX.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/UISVpGX.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;nên mình để ý tới các function ngay bên dưới có chứa các kí tự gồm số và chữ cái&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/https:/i.imgur.com/qr8fj8l.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/qr8fj8l.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Khi nhấn vào function đầu tiên thì hiện ra graph overview như sau:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/https:/i.imgur.com/Jb4SH1H.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/Jb4SH1H.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;và với 1 người chơi hệ tâm linh như mình thì mình cảm nhận chữ &lt;code&gt;a&lt;/code&gt; này hơi quen, hình như nó ở format của flag thì phải &lt;code&gt;accessdenied{}&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;mình tiếp tục xem các function tiếp theo lần lượt hiện c, c, e, s, s, &amp;hellip; nên mình chắc ăn đây là flag và hoàn toàn chúng ta có thể chạy từng function một để ghép lại thành flag hoàn chỉnh&lt;/p&gt;
 &lt;p&gt;Sau quá trình gian nan, thì mình ghép lại được cụm flag là:&lt;/p&gt;

@@ -260,43 +260,19 @@
 <h2 id="misc">MISC</h2>
 <h3 id="shark1">[Shark1]</h3>
 <p>Ở bài misc đầu tiên, chúng ta nhận được 1 file .pcapng tiến hành mở file bằng wireshark, ta thu được</p>
-<p><img src="/https:/i.imgur.com/QFViiy2.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><a class="link" href="https://i.imgur.com/QFViiy2.png"  target="_blank" rel="noopener"
+    ></a></p>
 <p>Mình kiểm tra 1 vài TCP Protocol thì nhận được</p>
-<p><img src="/https:/i.imgur.com/ID79OSC.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><a class="link" href="https://i.imgur.com/ID79OSC.png"  target="_blank" rel="noopener"
+    ></a></p>
 <p>Nên mình quyết định follow TCP (Follow &ndash;&gt; TCP Stream)</p>
-<p><img src="/https:/i.imgur.com/tCFc5Kb.png"
-	
-	
-	
-	loading="lazy"
-	
-	
->
+<p><a class="link" href="https://i.imgur.com/tCFc5Kb.png"  target="_blank" rel="noopener"
+    ></a>
 Vậy là chúng ta sẽ phải biến đổi cụm flag kia thông qua XOR với xor key = 80
 Sử dụng trang <a class="link" href="https://cyberchef.org/"  target="_blank" rel="noopener"
     >CyberChef</a> và điền các thông số vào</p>
-<p><img src="/https:/i.imgur.com/DszMPKQ.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><a class="link" href="https://i.imgur.com/DszMPKQ.png"  target="_blank" rel="noopener"
+    ></a></p>
 <h5 id="---flag-accessdeniedw1r3sh4rk_b3st_f0r_p4ck3t_sn1ff1ng_9fc3841b1">&ndash;&gt; <em>flag: accessdenied{w1r3sh4rk_b3st_f0r_p4ck3t_sn1ff1ng_9fc3841b1}</em></h5>
 <h3 id="bobs-favourite-number">[Bobs Favourite Number]</h3>
 <p>Dữ kiện:</p>
@@ -1300,51 +1276,21 @@ int main()
 <h3 id="enormous">[enormous]</h3>
 <p>Ở bài này thì đơn giản ở chỗ (hoặc là mình bị lừa vì mình không test flag được) chúng ta sử dụng <strong>IDA</strong> (bản nào cũng được nhưng phải là bản thích hợp :&gt;) để tìm ra flag 1 cách dễ dàng.</p>
 <h4 id="check-function-trong-ida">Check function trong IDA</h4>
-<p><img src="/https:/i.imgur.com/05vJL5k.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><a class="link" href="https://i.imgur.com/05vJL5k.png"  target="_blank" rel="noopener"
+    ></a></p>
 <p>Dễ thấy trong mục function không có main nên mình cũng hơi mông lung 1 chút trong việc suy nghĩ liệu hàm main có bị ẩn đi hay không và nếu ẩn đi thì làm thế nào để mở được.</p>
 <p>Quay lại đề bài 1 chút, để ý rằng đề bài có nhắc đến <code>see the number</code></p>
-<p><img src="/https:/i.imgur.com/TnCTZ7a.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><a class="link" href="https://i.imgur.com/TnCTZ7a.png"  target="_blank" rel="noopener"
+    ></a></p>
 <p>Lúc đầu mình cũng không để ý lắm tới khi sử dụng lệnh <code>strings enormous</code> và hiện ra 1 loạt các dòng số và chữ</p>
-<p><img src="/https:/i.imgur.com/UISVpGX.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><a class="link" href="https://i.imgur.com/UISVpGX.png"  target="_blank" rel="noopener"
+    ></a></p>
 <p>nên mình để ý tới các function ngay bên dưới có chứa các kí tự gồm số và chữ cái</p>
-<p><img src="/https:/i.imgur.com/qr8fj8l.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><a class="link" href="https://i.imgur.com/qr8fj8l.png"  target="_blank" rel="noopener"
+    ></a></p>
 <p>Khi nhấn vào function đầu tiên thì hiện ra graph overview như sau:</p>
-<p><img src="/https:/i.imgur.com/Jb4SH1H.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><a class="link" href="https://i.imgur.com/Jb4SH1H.png"  target="_blank" rel="noopener"
+    ></a></p>
 <p>và với 1 người chơi hệ tâm linh như mình thì mình cảm nhận chữ <code>a</code> này hơi quen, hình như nó ở format của flag thì phải <code>accessdenied{}</code></p>
 <p>mình tiếp tục xem các function tiếp theo lần lượt hiện c, c, e, s, s, &hellip; nên mình chắc ăn đây là flag và hoàn toàn chúng ta có thể chạy từng function một để ghép lại thành flag hoàn chỉnh</p>
 <p>Sau quá trình gian nan, thì mình ghép lại được cụm flag là:</p>
