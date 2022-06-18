@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CTF on Spid3r hack dạo</title>
-        <link>https://hathai25.github.io/tags/ctf/</link>
+        <link>https://iamironman1233.github.io/tags/ctf/</link>
         <description>Recent content in CTF on Spid3r hack dạo</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 17 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hathai25.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 17 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iamironman1233.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Access Denied CTF 2022</title>
-        <link>https://hathai25.github.io/post/access-denined-ctf-2022/</link>
+        <link>https://iamironman1233.github.io/post/access-denined-ctf-2022/</link>
         <pubDate>Fri, 17 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://hathai25.github.io/post/access-denined-ctf-2022/</guid>
-        <description>&lt;img src="https://hathai25.github.io/post/access-denined-ctf-2022/logo.png" alt="Featured image of post Access Denied CTF 2022" /&gt;&lt;p&gt;&lt;em&gt;Thu, 09 June 2022, 23:30 SST — Sat, 11 June 2022, 23:30 SST&lt;/em&gt; - &lt;em&gt;&lt;strong&gt;On-line&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/logo1.png&#34;
+        <guid>https://iamironman1233.github.io/post/access-denined-ctf-2022/</guid>
+        <description>&lt;img src="https://iamironman1233.github.io/post/access-denined-ctf-2022/logo.png" alt="Featured image of post Access Denied CTF 2022" /&gt;&lt;p&gt;&lt;em&gt;Thu, 09 June 2022, 23:30 SST — Sat, 11 June 2022, 23:30 SST&lt;/em&gt; - &lt;em&gt;&lt;strong&gt;On-line&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/logo1.png&#34;
 	width=&#34;553&#34;
 	height=&#34;480&#34;
-	srcset=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/logo1_hu02325e72f69a760fa351df236c38a5ed_14981_480x0_resize_box_3.png 480w, https://hathai25.github.io/post/access-denined-ctf-2022/logo1_hu02325e72f69a760fa351df236c38a5ed_14981_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/logo1_hu02325e72f69a760fa351df236c38a5ed_14981_480x0_resize_box_3.png 480w, https://iamironman1233.github.io/post/access-denined-ctf-2022/logo1_hu02325e72f69a760fa351df236c38a5ed_14981_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -30,10 +30,10 @@
 &lt;h2 id=&#34;misc&#34;&gt;MISC&lt;/h2&gt;
 &lt;h3 id=&#34;shark1&#34;&gt;[Shark1]&lt;/h3&gt;
 &lt;p&gt;Ở bài misc đầu tiên, chúng ta nhận được 1 file .pcapng tiến hành mở file bằng wireshark, ta thu được&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/QFViiy2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/QFViiy2.png&#34;
 	width=&#34;1916&#34;
 	height=&#34;892&#34;
-	srcset=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/QFViiy2_hu7a42e57134e27096c89eda819cb8c752_254354_480x0_resize_box_3.png 480w, https://hathai25.github.io/post/access-denined-ctf-2022/QFViiy2_hu7a42e57134e27096c89eda819cb8c752_254354_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/QFViiy2_hu7a42e57134e27096c89eda819cb8c752_254354_480x0_resize_box_3.png 480w, https://iamironman1233.github.io/post/access-denined-ctf-2022/QFViiy2_hu7a42e57134e27096c89eda819cb8c752_254354_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -43,10 +43,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Mình kiểm tra 1 vài TCP Protocol thì nhận được&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/ID79OSC.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/ID79OSC.png&#34;
 	width=&#34;695&#34;
 	height=&#34;227&#34;
-	srcset=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/ID79OSC_hu5f3a06d0dfceb9c0658f402440b8cb26_53962_480x0_resize_box_3.png 480w, https://hathai25.github.io/post/access-denined-ctf-2022/ID79OSC_hu5f3a06d0dfceb9c0658f402440b8cb26_53962_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/ID79OSC_hu5f3a06d0dfceb9c0658f402440b8cb26_53962_480x0_resize_box_3.png 480w, https://iamironman1233.github.io/post/access-denined-ctf-2022/ID79OSC_hu5f3a06d0dfceb9c0658f402440b8cb26_53962_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -56,10 +56,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Nên mình quyết định follow TCP (Follow &amp;ndash;&amp;gt; TCP Stream)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/tCFc5Kb.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/tCFc5Kb.png&#34;
 	width=&#34;955&#34;
 	height=&#34;138&#34;
-	srcset=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/tCFc5Kb_hu9168bb11d0f01ea781b1c07c91c0a365_21272_480x0_resize_box_3.png 480w, https://hathai25.github.io/post/access-denined-ctf-2022/tCFc5Kb_hu9168bb11d0f01ea781b1c07c91c0a365_21272_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/tCFc5Kb_hu9168bb11d0f01ea781b1c07c91c0a365_21272_480x0_resize_box_3.png 480w, https://iamironman1233.github.io/post/access-denined-ctf-2022/tCFc5Kb_hu9168bb11d0f01ea781b1c07c91c0a365_21272_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -71,10 +71,10 @@
 &lt;p&gt;Vậy là chúng ta sẽ phải biến đổi cụm flag kia thông qua XOR với xor key = 80
 Sử dụng trang &lt;a class=&#34;link&#34; href=&#34;https://cyberchef.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;CyberChef&lt;/a&gt; và điền các thông số vào&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/DszMPKQ.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/DszMPKQ.png&#34;
 	width=&#34;1058&#34;
 	height=&#34;544&#34;
-	srcset=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/DszMPKQ_hue4f4d897640014005ed92771c80d5a9f_25458_480x0_resize_box_3.png 480w, https://hathai25.github.io/post/access-denined-ctf-2022/DszMPKQ_hue4f4d897640014005ed92771c80d5a9f_25458_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/DszMPKQ_hue4f4d897640014005ed92771c80d5a9f_25458_480x0_resize_box_3.png 480w, https://iamironman1233.github.io/post/access-denined-ctf-2022/DszMPKQ_hue4f4d897640014005ed92771c80d5a9f_25458_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1499,10 +1499,10 @@ int main()
 &lt;h3 id=&#34;enormous&#34;&gt;[enormous]&lt;/h3&gt;
 &lt;p&gt;Ở bài này thì đơn giản ở chỗ (hoặc là mình bị lừa vì mình không test flag được) chúng ta sử dụng &lt;strong&gt;IDA&lt;/strong&gt; (bản nào cũng được nhưng phải là bản thích hợp :&amp;gt;) để tìm ra flag 1 cách dễ dàng.&lt;/p&gt;
 &lt;h4 id=&#34;check-function-trong-ida&#34;&gt;Check function trong IDA&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/05vJL5k.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/05vJL5k.png&#34;
 	width=&#34;387&#34;
 	height=&#34;420&#34;
-	srcset=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/05vJL5k_hueb5f24cb4123873c783280ac73f6fb58_30530_480x0_resize_box_3.png 480w, https://hathai25.github.io/post/access-denined-ctf-2022/05vJL5k_hueb5f24cb4123873c783280ac73f6fb58_30530_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/05vJL5k_hueb5f24cb4123873c783280ac73f6fb58_30530_480x0_resize_box_3.png 480w, https://iamironman1233.github.io/post/access-denined-ctf-2022/05vJL5k_hueb5f24cb4123873c783280ac73f6fb58_30530_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1513,10 +1513,10 @@ int main()
 &gt;&lt;/p&gt;
 &lt;p&gt;Dễ thấy trong mục function không có main nên mình cũng hơi mông lung 1 chút trong việc suy nghĩ liệu hàm main có bị ẩn đi hay không và nếu ẩn đi thì làm thế nào để mở được.&lt;/p&gt;
 &lt;p&gt;Quay lại đề bài 1 chút, để ý rằng đề bài có nhắc đến &lt;code&gt;see the number&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/TnCTZ7a.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/TnCTZ7a.png&#34;
 	width=&#34;441&#34;
 	height=&#34;290&#34;
-	srcset=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/TnCTZ7a_hu437bc0b4e50956086aca6c06167bbf08_7555_480x0_resize_box_3.png 480w, https://hathai25.github.io/post/access-denined-ctf-2022/TnCTZ7a_hu437bc0b4e50956086aca6c06167bbf08_7555_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/TnCTZ7a_hu437bc0b4e50956086aca6c06167bbf08_7555_480x0_resize_box_3.png 480w, https://iamironman1233.github.io/post/access-denined-ctf-2022/TnCTZ7a_hu437bc0b4e50956086aca6c06167bbf08_7555_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1526,10 +1526,10 @@ int main()
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Lúc đầu mình cũng không để ý lắm tới khi sử dụng lệnh &lt;code&gt;strings enormous&lt;/code&gt; và hiện ra 1 loạt các dòng số và chữ&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/UISVpGX.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/UISVpGX.png&#34;
 	width=&#34;540&#34;
 	height=&#34;783&#34;
-	srcset=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/UISVpGX_hu3cfc756c71a39555de19cb4387c36b59_98222_480x0_resize_box_3.png 480w, https://hathai25.github.io/post/access-denined-ctf-2022/UISVpGX_hu3cfc756c71a39555de19cb4387c36b59_98222_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/UISVpGX_hu3cfc756c71a39555de19cb4387c36b59_98222_480x0_resize_box_3.png 480w, https://iamironman1233.github.io/post/access-denined-ctf-2022/UISVpGX_hu3cfc756c71a39555de19cb4387c36b59_98222_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1539,10 +1539,10 @@ int main()
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;nên mình để ý tới các function ngay bên dưới có chứa các kí tự gồm số và chữ cái&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/qr8fj8l.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/qr8fj8l.png&#34;
 	width=&#34;195&#34;
 	height=&#34;330&#34;
-	srcset=&#34;https://hathai25.github.io/post/access-denined-ctf-2022/qr8fj8l_hu869afd781d0fa0839ec873ea734cf111_23270_480x0_resize_box_3.png 480w, https://hathai25.github.io/post/access-denined-ctf-2022/qr8fj8l_hu869afd781d0fa0839ec873ea734cf111_23270_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://iamironman1233.github.io/post/access-denined-ctf-2022/qr8fj8l_hu869afd781d0fa0839ec873ea734cf111_23270_480x0_resize_box_3.png 480w, https://iamironman1233.github.io/post/access-denined-ctf-2022/qr8fj8l_hu869afd781d0fa0839ec873ea734cf111_23270_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1552,7 +1552,7 @@ int main()
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Khi nhấn vào function đầu tiên thì hiện ra graph overview như sau:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://hathai25.github.io/hJb4SH1H.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://iamironman1233.github.io/hJb4SH1H.png&#34;
 	
 	
 	
