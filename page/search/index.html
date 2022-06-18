@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="" dir="ltr">
-    <head>
-	<meta name="generator" content="Hugo 0.101.0" /><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=''><title></title>
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=''><title>Search</title>
 
-<link rel='canonical' href='/'>
+<link rel='canonical' href='/page/search/'>
 
-<link rel="stylesheet" href="/scss/style.min.2a426798c147941971a3556278c8cfb14775867d8c34a1f67a6827752a1b4bd5.css"><meta property='og:title' content=''>
+<link rel="stylesheet" href="/scss/style.min.2a426798c147941971a3556278c8cfb14775867d8c34a1f67a6827752a1b4bd5.css"><meta property='og:title' content='Search'>
 <meta property='og:description' content=''>
-<meta property='og:url' content='/'>
+<meta property='og:url' content='/page/search/'>
 <meta property='og:site_name' content=''>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2022-06-18T00:00:00&#43;00:00 '/>
-<meta name="twitter:title" content="">
-<meta name="twitter:description" content=""><link rel="alternate" type="application/rss&#43;xml" href="/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Page' />
+<meta name="twitter:title" content="Search">
+<meta name="twitter:description" content=""><link rel="alternate" type="application/json" href="/page/search/index.json"><link rel="preload" href="/page/search/index.json" as="fetch" crossorigin="anonymous">
     </head>
-    <body class="">
+    <body class="template-search">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -73,7 +72,7 @@
         
         
 
-        <li  class='current' >
+        <li >
             <a href='/' >
                 
                 
@@ -135,7 +134,7 @@
         
         
 
-        <li >
+        <li  class='current' >
             <a href='/page/search/' >
                 
                 
@@ -181,70 +180,33 @@
     </ol>
 </aside>
 <main class="main full-width">
-    
-    
-    <section class="article-list">
-        
-            
-<article class="">
-    <header class="article-header">
+<form action="/page/search/" class="search-form"data-json="/page/search/index.json">
+    <p>
+        <label>Search</label>
+        <input name="keyword" placeholder="Type something..." />
+    </p>
 
-    <div class="article-details">
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/post/access-denined-ctf-2022/">Access Denied CTF 2022</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            Writeups Access Denied CTF 2022
-        </h3>
-        
-    </div>
-
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <button title="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Jun 17, 2022</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
 </svg>
 
 
 
-                <time class="article-time--reading">
-                    21 minute read
-                </time>
-            </div>
-        
-    </footer>
-    
+    </button>
+</form>
 
-    
+<div class="search-result">
+    <h3 class="search-result--title section-title"></h3>
+    <div class="search-result--list article-list--compact"></div>
 </div>
-</header>
-</article>
-        
-    </section>
+
+<script>
+    window.searchResultTitleTemplate = "#PAGES_COUNT pages (#TIME_SECONDS seconds)"
+</script><script type="text/javascript" src="/ts/search.js" defer></script>
+
 <footer class="site-footer">
     <section class="copyright">
         &copy; 
@@ -258,9 +220,8 @@
     </section>
 </footer>
 
-            </main>
-    
 
+            </main>
         </div>
         <script type="text/javascript" src="/ts/main.js" defer></script>
 <script>
