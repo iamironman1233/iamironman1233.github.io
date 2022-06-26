@@ -413,7 +413,7 @@ int main()
     scanf(&#34;%f&#34;, &amp;y);
     if (x&lt;y)
       min = x;
-    else 
+    else
       min = y;
     printf(&#34;%.2f&#34;, min);
     return 0;
@@ -442,7 +442,7 @@ int main()
 </span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%f&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">      <span class="n">min</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
 </span></span><span class="line"><span class="cl">      <span class="n">min</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%.2f&#34;</span><span class="p">,</span> <span class="n">min</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -470,7 +470,7 @@ int main()
     scanf(&#34;%f&#34;, &amp;y);
     if (x&gt;y)
       max = x;
-    else 
+    else
       max = y;
     printf(&#34;%6.2f&#34;,max);
     return 0;
@@ -499,7 +499,7 @@ int main()
 </span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%f&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">      <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
 </span></span><span class="line"><span class="cl">      <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%6.2f&#34;</span><span class="p">,</span><span class="n">max</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -1184,58 +1184,23 @@ int main()
     </header>
     <code id="codeblock-id-15" style="display:none;">#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
-
-void giaiPTBac2(float a, float b, float c)
+int main ()
 {
-
-    if (a == 0)
-    {
-        if (b == 0)
-        {
-            if (c == 0)
-            {
-                printf(&#34;Phuong trinh vo so nghiem&#34;);
-            }
-            else
-                printf(&#34;Phuong trinh vo nghiem&#34;);
-        }
-        else
-        {
-            printf(&#34;%f&#34;, (-c / b));
-        }
-        return;
-    }
-    float delta = b * b - 4 * a * c;
-    float x1;
-    float x2;
-    if (delta &gt; 0)
-    {
-        x1 = (float)((-b &#43; sqrt(delta)) / (2 * a));
-        x2 = (float)((-b - sqrt(delta)) / (2 * a));
-        printf(&#34;%f %f&#34;, x1, x2);
-    }
-    else if (delta == 0)
-    {
-        x1 = (-b / (2 * a));
-        printf(&#34;%f%f&#34;, x1, x1);
-    }
-    else
-    {
-        printf(&#34;Phuong trinh vo nghiem&#34;);
-    }
-}
-
-/**
- * ham main
- */
-int main()
-{
-    float a, b, c;
-    scanf(&#34;%f&#34;, &amp;a);
-    scanf(&#34;%f&#34;, &amp;b);
-    scanf(&#34;%f&#34;, &amp;c);
-    giaiPTBac2(a, b, c);
-    return 1;
+	double a,b,c, delta;
+	scanf (&#34;%lf%lf%lf&#34;,&amp;a,&amp;b,&amp;c);
+	if (a==0)
+	   {if (b==0 &amp;&amp; c==0) printf (&#34;Phuong trinh vo so nghiem&#34;);
+	   if (b==0 &amp;&amp; c!=0) printf (&#34;Phuong trinh vo nghiem&#34;);
+	   if (b!=0) printf (&#34;%lf&#34;,-c/b);}
+	else
+	   {delta = b*b - 4*a*c;
+	   if (delta==0) printf (&#34;%lf&#34;,-b/(2*a));
+	   if (delta&gt;0)
+	       {printf (&#34;%lf&#34;, (-b&#43;sqrt(delta))/(2*a));
+	       printf (&#34;%lf&#34;, (b-sqrt(delta))/(2*a));}
+	   if (delta&lt;0)
+	       {printf (&#34;%lf &#43; %lfi&#34;,-b/(2*a), sqrt(-delta)/(2*a));
+	      printf  (&#34;%lf - %lfi&#34;, -b/(2*a), sqrt(-delta)/(2*a));}
 }</code><div class=""><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1258,97 +1223,27 @@ int main()
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">giaiPTBac2</span><span class="p">(</span><span class="kt">float</span> <span class="n">a</span><span class="p">,</span> <span class="kt">float</span> <span class="n">b</span><span class="p">,</span> <span class="kt">float</span> <span class="n">c</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Phuong trinh vo so nghiem&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span>
-</span></span><span class="line"><span class="cl">                <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Phuong trinh vo nghiem&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%f&#34;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="n">c</span> <span class="o">/</span> <span class="n">b</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">delta</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">x1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">x2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)((</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">x2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)((</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%f %f&#34;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">delta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%f%f&#34;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Phuong trinh vo nghiem&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * ham main
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%f&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%f&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%f&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">giaiPTBac2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span> <span class="n">delta</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">scanf</span> <span class="p">(</span><span class="s">&#34;%lf%lf%lf&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="o">&amp;</span><span class="n">b</span><span class="p">,</span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	   <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">c</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;Phuong trinh vo so nghiem&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">c</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;Phuong trinh vo nghiem&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span><span class="o">-</span><span class="n">c</span><span class="o">/</span><span class="n">b</span><span class="p">);}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	   <span class="p">{</span><span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">delta</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span><span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">delta</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	       <span class="p">{</span><span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">+</span><span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	       <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));}</span>
+</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">delta</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	       <span class="p">{</span><span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf + %lfi&#34;</span><span class="p">,</span><span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">delta</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	      <span class="n">printf</span>  <span class="p">(</span><span class="s">&#34;%lf - %lfi&#34;</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">delta</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></div></div>
