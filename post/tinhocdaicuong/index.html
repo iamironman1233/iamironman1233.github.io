@@ -280,7 +280,7 @@
 
 
                 <time class="article-time--reading">
-                    14 minute read
+                    1 minute read
                 </time>
             </div>
         
@@ -292,11 +292,10 @@
 </header>
 
     <section class="article-content">
-    
-    
+      <h2>Vì 1 số thanh niên ăn cháo đá bát cho nên post này sẽ mở lại sau</h2>
    
-</div>
-</div></div></div>
+  <p id="demo"></p>
+        
 
 </section>
 
@@ -337,7 +336,36 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.2.7/dist/photoswipe.css"
     integrity="sha256-olf9rfn3AG8zR6lkPXkN3PZq63z8tElx7Ela6T4eklo=" crossorigin="anonymous">
+<script>
 
+  var countDownDate = new Date("Jun 30, 2022 20:20:25").getTime();
+ 
+  // cập nhập thời gian sau mỗi 1 giây
+  var x = setInterval(function() {
+ 
+    // Lấy thời gian hiện tại
+    var now = new Date().getTime();
+ 
+    // Lấy số thời gian chênh lệch
+    var distance = countDownDate - now;
+ 
+    // Tính toán số ngày, giờ, phút, giây từ thời gian chênh lệch
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ 
+    // HIển thị chuỗi thời gian trong thẻ p
+    document.getElementById("demo").innerHTML = days + "Ngày " + hours + "Giờ "
+    + minutes + "Phút " + seconds + "Giây ";
+ 
+    // Nếu thời gian kết thúc, hiển thị chuỗi thông báo
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "Thời gian đếm ngược đã kết thúc";
+    }
+  }, 1000);
+</script>
 <script type="module">
     import StackGallery from '\/ts\/gallery.js';
     import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.2.7/dist/photoswipe-lightbox.esm.min.js';
