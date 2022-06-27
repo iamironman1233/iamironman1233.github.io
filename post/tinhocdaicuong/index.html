@@ -279,7 +279,7 @@
 
 
                 <time class="article-time--reading">
-                    10 minute read
+                    11 minute read
                 </time>
             </div>
         
@@ -875,21 +875,80 @@ int main ()
         </button>
     </header>
     <code id="codeblock-id-11" style="display:none;">#include &lt;stdio.h&gt;
-int main()
+int main ()
 {
-    float n;
-    int i, giaithua;
-    scanf(&#34;%f&#34;, &amp;n);
-    if (n == (int)n)
-    {
-        for (i = 1; i &lt;= n; i&#43;&#43;)
-        {
-            giaithua *= i;
-        }
-        printf(&#34;%d&#34;, giaithua);
-    }
-    else
-        printf(&#34;ERROR&#34;);
+	int n, i, s=1;
+	scanf (&#34;%d&#34;,&amp;n);
+    if (n&lt;0||n&gt;=8)
+       printf (&#34;ERROR&#34;); 
+	else
+	   {
+	       for (i=1; i&lt;=n; i&#43;&#43;)
+		       s=s*i;
+	       printf (&#34;%d&#34;,s);
+	   }
+}</code><div class=""><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">scanf</span> <span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">||</span><span class="n">n</span><span class="o">&gt;=</span><span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">       <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;ERROR&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	   <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	       <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		       <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="o">*</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	       <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div></div>
+<h3 id="bài-402">Bài 4.02</h3>
+<div class="codeblock">
+    <header>
+        <span class="codeblock-lang">c</span>
+        <button 
+            class="codeblock-copy"
+            data-id="codeblock-id-12"
+            data-copied-text="Copied!"
+        >
+            Copy
+        </button>
+    </header>
+    <code id="codeblock-id-12" style="display:none;">#include &lt;stdio.h&gt;
+int main ()
+{
+	int n, i, a=0; 
+	scanf (&#34;%d&#34;,&amp;n); 
+	if (n&lt;=1) 
+	    printf (&#34;Khong phai so nguyen to&#34;);
+	else{
+	    for (i=2; i&lt;n; i&#43;&#43;) 
+	        if (n%i==0)
+	           a&#43;&#43;;
+	    if (a==0)
+	        printf (&#34;La so nguyen to&#34;); 
+	    else 
+	        printf (&#34;Khong phai so nguyen to&#34;);
+	}
 }</code><div class=""><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -912,77 +971,21 @@ int main()
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">n</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">giaithua</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%f&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">n</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">giaithua</span> <span class="o">*=</span> <span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">giaithua</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;ERROR&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div></div></div>
-<h3 id="bài-402">Bài 4.02</h3>
-<div class="codeblock">
-    <header>
-        <span class="codeblock-lang">c</span>
-        <button 
-            class="codeblock-copy"
-            data-id="codeblock-id-12"
-            data-copied-text="Copied!"
-        >
-            Copy
-        </button>
-    </header>
-    <code id="codeblock-id-12" style="display:none;">#include &lt;stdio.h&gt;
-int main()
-{
-    int n;
-    scanf(&#34;%d&#34;, &amp;n);
-    int i = n - 1;
-    while (n % i)
-        i--;
-    if (i == 1)
-        printf(&#34;La so nguyen to&#34;);
-    else
-        printf(&#34;Khong phai la so nguyen to&#34;);
-}</code><div class=""><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">--</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;La so nguyen to&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Khong phai la so nguyen to&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">	<span class="n">scanf</span> <span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">	    <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;Khong phai so nguyen to&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">	        <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	           <span class="n">a</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	        <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;La so nguyen to&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	    <span class="k">else</span> 
+</span></span><span class="line"><span class="cl">	        <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;Khong phai so nguyen to&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></div></div>
@@ -1001,112 +1004,28 @@ int main()
     <code id="codeblock-id-13" style="display:none;">#include &lt;stdio.h&gt;
 int main()
 {
-    int n, a, b;
+    int n, a = 0, b = 0;
     scanf(&#34;%d&#34;, &amp;n);
     if (n &gt;= 1000)
         printf(&#34;ERROR&#34;);
     else
     {
-        while ((n / 100) &gt;= 1)
+        if (n &lt; 10)
+            printf(&#34;%d&#34;, n);
+        else
         {
-            a = n / 100;
-            n %= 100;
+            while ((n / 100) &gt;= 1)
+            {
+                a = n / 100;
+                n %= 100;
+            }
+            while ((n / 10) &gt;= 1)
+            {
+                b = n / 10;
+                n %= 10;
+            }
+            printf(&#34;%d&#34;, a &#43; b &#43; n);
         }
-        while ((n / 10) &gt;= 1)
-        {
-            b = n / 10;
-            n %= 10;
-        }
-        printf(&#34;%d&#34;, a &#43; b &#43; n);
-    }
-}</code><div class=""><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">1000</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;ERROR&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">((</span><span class="n">n</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">a</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">n</span> <span class="o">%=</span> <span class="mi">100</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">((</span><span class="n">n</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">b</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">n</span> <span class="o">%=</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div></div></div>
-<h3 id="bài-404">Bài 4.04</h3>
-<div class="codeblock">
-    <header>
-        <span class="codeblock-lang">c</span>
-        <button 
-            class="codeblock-copy"
-            data-id="codeblock-id-14"
-            data-copied-text="Copied!"
-        >
-            Copy
-        </button>
-    </header>
-    <code id="codeblock-id-14" style="display:none;">#include &lt;stdio.h&gt;
-int main()
-{
-    int a, b, min;
-    scanf(&#34;%d%d&#34;, &amp;a, &amp;b);
-    // Tìm số nhỏ nhất trong 2 só a, b
-    if (a &gt;= b)
-        min = b;
-    else
-        min = a;
-    // Tìm ước chung lớn nhất bằng cách đặt 1 1 số là số nhỏ
-    // nhất trong 2 số và cho nó lùi dần về 1, nếu cả 2 só cùng
-    //  chia hết cho nó thì oke
-    while (min &gt;= 1)
-    {
-        if (a % min == 0 &amp;&amp; b % min == 0)
-            break;
-        min--;
-    }
-    if (min == 0)
-        printf(&#34;ERROR&#34;);
-    else
-    {
-        printf(&#34;%d&#34;, min);
-        // Tìm bội chung nhỏ nhất bằng cách lấy a.b/ước chung nhỏ nhất
-        printf(&#34; %d&#34;, a * b / min);
     }
 }</code><div class=""><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1137,70 +1056,71 @@ int main()
 </span><span class="lnt">25
 </span><span class="lnt">26
 </span><span class="lnt">27
-</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">min</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// Tìm số nhỏ nhất trong 2 só a, b
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">min</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="n">min</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// Tìm ước chung lớn nhất bằng cách đặt 1 1 số là số nhỏ
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// nhất trong 2 số và cho nó lùi dần về 1, nếu cả 2 só cùng
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//  chia hết cho nó thì oke
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">while</span> <span class="p">(</span><span class="n">min</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">min</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="o">%</span> <span class="n">min</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">min</span><span class="o">--</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">min</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">1000</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;ERROR&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">min</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// Tìm bội chung nhỏ nhất bằng cách lấy a.b/ước chung nhỏ nhất
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">printf</span><span class="p">(</span><span class="s">&#34; %d&#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">/</span> <span class="n">min</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">((</span><span class="n">n</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">a</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">n</span> <span class="o">%=</span> <span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">((</span><span class="n">n</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">b</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">n</span> <span class="o">%=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></div></div>
-<h3 id="bài-405">Bài 4.05</h3>
+<h3 id="bài-404">Bài 4.04</h3>
 <div class="codeblock">
     <header>
         <span class="codeblock-lang">c</span>
         <button 
             class="codeblock-copy"
-            data-id="codeblock-id-15"
+            data-id="codeblock-id-14"
             data-copied-text="Copied!"
         >
             Copy
         </button>
     </header>
-    <code id="codeblock-id-15" style="display:none;">#include &lt;stdio.h&gt;
-#include &lt;math.h&gt;
-int main ()
+    <code id="codeblock-id-14" style="display:none;">#include &lt;stdio.h&gt;
+int main()
 {
-	double a,b,c, delta;
-	scanf (&#34;%lf%lf%lf&#34;,&amp;a,&amp;b,&amp;c);
-	if (a==0)
-	   {if (b==0 &amp;&amp; c==0) printf (&#34;Phuong trinh vo so nghiem&#34;);
-	   if (b==0 &amp;&amp; c!=0) printf (&#34;Phuong trinh vo nghiem&#34;);
-	   if (b!=0) printf (&#34;%lf&#34;,-c/b);}
-	else
-	   {delta = b*b - 4*a*c;
-	   if (delta==0) printf (&#34;%lf&#34;,-b/(2*a));
-	   if (delta&gt;0)
-	       {printf (&#34;%lf&#34;, (-b&#43;sqrt(delta))/(2*a));
-	       printf (&#34;%lf&#34;, (b-sqrt(delta))/(2*a));}
-	   if (delta&lt;0)
-	       {printf (&#34;%lf &#43; %lfi&#34;,-b/(2*a), sqrt(-delta)/(2*a));
-	      printf  (&#34;%lf - %lfi&#34;, -b/(2*a), sqrt(-delta)/(2*a));}
+    int a, b, min;
+    scanf(&#34;%d%d&#34;, &amp;a, &amp;b);
+    if (a &gt;= b)
+        min = b;
+    else
+        min = a;
+    while (min &gt;= 1)
+    {
+        if (a % min == 0 &amp;&amp; b % min == 0)
+            break;
+        min--;
+    }
+    if (min &lt;= 0)
+        printf(&#34;ERROR&#34;);
+    else
+    {
+        printf(&#34;%d\n&#34;, min);
+        printf(&#34;%d&#34;, a * b / min);
+    }
 }</code><div class=""><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1223,74 +1143,79 @@ int main ()
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span> <span class="n">delta</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	<span class="n">scanf</span> <span class="p">(</span><span class="s">&#34;%lf%lf%lf&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="o">&amp;</span><span class="n">b</span><span class="p">,</span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	   <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">c</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;Phuong trinh vo so nghiem&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">c</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;Phuong trinh vo nghiem&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span><span class="o">-</span><span class="n">c</span><span class="o">/</span><span class="n">b</span><span class="p">);}</span>
-</span></span><span class="line"><span class="cl">	<span class="k">else</span>
-</span></span><span class="line"><span class="cl">	   <span class="p">{</span><span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">delta</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span><span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">delta</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	       <span class="p">{</span><span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span><span class="o">+</span><span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">	       <span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));}</span>
-</span></span><span class="line"><span class="cl">	   <span class="k">if</span> <span class="p">(</span><span class="n">delta</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">	       <span class="p">{</span><span class="n">printf</span> <span class="p">(</span><span class="s">&#34;%lf + %lfi&#34;</span><span class="p">,</span><span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">delta</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">	      <span class="n">printf</span>  <span class="p">(</span><span class="s">&#34;%lf - %lfi&#34;</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">delta</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">));}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">min</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">min</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">min</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">min</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">min</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="o">%</span> <span class="n">min</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">min</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">min</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;ERROR&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">min</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">/</span> <span class="n">min</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></div></div>
-<h3 id="bài-406">Bài 4.06</h3>
+<h3 id="bài-405">Bài 4.05</h3>
 <div class="codeblock">
     <header>
         <span class="codeblock-lang">c</span>
         <button 
             class="codeblock-copy"
-            data-id="codeblock-id-16"
+            data-id="codeblock-id-15"
             data-copied-text="Copied!"
         >
             Copy
         </button>
     </header>
-    <code id="codeblock-id-16" style="display:none;">#include &lt;stdio.h&gt;
+    <code id="codeblock-id-15" style="display:none;">#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
-long giaithua(int n)
-{
-    if (n &gt; 0)
-        return n * giaithua(n - 1);
-    else
-        return 1;
-}
 int main()
 {
-    float x, S1 = 0, S2 = 0, S3 = 0, T, m;
-    int n;
-    scanf(&#34;%f%f&#34;, &amp;m, &amp;x);
-    if (m == (int)m &amp;&amp; m &gt; 0)
+    double a, b, c, delta;
+    scanf(&#34;%lf%lf%lf&#34;, &amp;a, &amp;b, &amp;c);
+    if (a == 0)
     {
-        n = m;
-        while (n &gt; 0)
-        {
-            T = pow(x, n);
-            S1 &#43;= T;
-            S3 = S3 &#43; T / giaithua(n);
-            if (n % 2 != 0)
-                S2 &#43;= (-1) * T;
-            else
-                S2 &#43;= T;
-            n--;
-        }
-        printf(&#34;%f %f %f&#34;, S1 &#43; 1, S2 &#43; 1, S3 &#43; 1);
+        if (b == 0 &amp;&amp; c == 0)
+            printf(&#34;Phuong trinh vo so nghiem&#34;);
+        if (b == 0 &amp;&amp; c != 0)
+            printf(&#34;Phuong trinh vo nghiem&#34;);
+        if (b != 0)
+            printf(&#34;%lf&#34;, -c / b);
     }
     else
-        printf(&#34;ERROR&#34;);
+    {
+        delta = b * b - 4 * a * c;
+        if (delta == 0)
+            printf(&#34;%lf&#34;, -b / (2 * a));
+        if (delta &gt; 0)
+        {
+            printf(&#34;%lf\n&#34;, (-b &#43; sqrt(delta)) / (2 * a));
+            printf(&#34;%lf&#34;, (-b - sqrt(delta)) / (2 * a));
+        }
+        if (delta &lt; 0)
+        {
+            printf(&#34;%lf&#43;%lfi\n&#34;, -b / (2 * a), sqrt(-delta) / (2 * a));
+            printf(&#34;%lf-%lfi&#34;, -b / (2 * a), sqrt(-delta) / (2 * a));
+        }
+    }
 }</code><div class=""><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1325,7 +1250,111 @@ int main()
 </span><span class="lnt">30
 </span><span class="lnt">31
 </span><span class="lnt">32
-</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">delta</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%lf%lf%lf&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Phuong trinh vo so nghiem&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Phuong trinh vo nghiem&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span> <span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">delta</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">delta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lf</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">delta</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lf+%lfi</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">delta</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lf-%lfi&#34;</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">delta</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div></div>
+<h3 id="bài-406">Bài 4.06</h3>
+<div class="codeblock">
+    <header>
+        <span class="codeblock-lang">c</span>
+        <button 
+            class="codeblock-copy"
+            data-id="codeblock-id-16"
+            data-copied-text="Copied!"
+        >
+            Copy
+        </button>
+    </header>
+    <code id="codeblock-id-16" style="display:none;">#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+long giaithua(int n)
+{
+    if (n &gt; 0)
+        return n * giaithua(n - 1);
+    else
+        return 1;
+}
+int main()
+{
+    double x, S1 = 0, T, m;
+    int n;
+    scanf(&#34;%lf%lf&#34;, &amp;m, &amp;x);
+    if (m == (int)m &amp;&amp; m &gt; 0)
+    {
+        n = m;
+        while (n &gt; 0)
+        {
+            T = pow(x, n);
+            S1 &#43;= T;
+            n--;
+        }
+        printf(&#34;%lf&#34;, S1 &#43; 1);
+    }
+    else
+        printf(&#34;Error&#34;);
+}</code><div class=""><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
@@ -1339,9 +1368,9 @@ int main()
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="n">S1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">S2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">S3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">S1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%f%f&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%lf%lf&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">==</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
@@ -1349,17 +1378,223 @@ int main()
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">T</span> <span class="o">=</span> <span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="n">S1</span> <span class="o">+=</span> <span class="n">T</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">S3</span> <span class="o">=</span> <span class="n">S3</span> <span class="o">+</span> <span class="n">T</span> <span class="o">/</span> <span class="n">giaithua</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">n</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span> <span class="n">S1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Error&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div></div>
+<h3 id="bài-407">Bài 4.07</h3>
+<div class="codeblock">
+    <header>
+        <span class="codeblock-lang">c</span>
+        <button 
+            class="codeblock-copy"
+            data-id="codeblock-id-17"
+            data-copied-text="Copied!"
+        >
+            Copy
+        </button>
+    </header>
+    <code id="codeblock-id-17" style="display:none;">#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+long giaithua(int n)
+{
+    if (n &gt; 0)
+        return n * giaithua(n - 1);
+    else
+        return 1;
+}
+int main()
+{
+    double x, S2 = 0, T, m;
+    int n;
+    scanf(&#34;%lf%lf&#34;, &amp;m, &amp;x);
+    if (m == (int)m &amp;&amp; m &gt; 0)
+    {
+        n = m;
+        while (n &gt; 0)
+        {
+            T = pow(x, n);
+            if (n % 2 != 0)
+                S2 &#43;= (-1) * T;
+            else
+                S2 &#43;= T;
+            n--;
+        }
+        printf(&#34;%lf&#34;, S2 &#43; 1);
+    }
+    else
+        printf(&#34;Error&#34;);
+}</code><div class=""><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">long</span> <span class="nf">giaithua</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">giaithua</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">S2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%lf%lf&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">==</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">T</span> <span class="o">=</span> <span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                <span class="n">S2</span> <span class="o">+=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">T</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="k">else</span>
 </span></span><span class="line"><span class="cl">                <span class="n">S2</span> <span class="o">+=</span> <span class="n">T</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="n">n</span><span class="o">--</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%f %f %f&#34;</span><span class="p">,</span> <span class="n">S1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">S2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">S3</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span> <span class="n">S2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;ERROR&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Error&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div></div>
+<h3 id="bài-408">Bài 4.08</h3>
+<div class="codeblock">
+    <header>
+        <span class="codeblock-lang">c</span>
+        <button 
+            class="codeblock-copy"
+            data-id="codeblock-id-18"
+            data-copied-text="Copied!"
+        >
+            Copy
+        </button>
+    </header>
+    <code id="codeblock-id-18" style="display:none;">#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+long giaithua(int n)
+{
+    if (n &gt; 0)
+        return n * giaithua(n - 1);
+    else
+        return 1;
+}
+int main()
+{
+    double x, S3 = 0, T, m;
+    int n;
+    scanf(&#34;%lf%lf&#34;, &amp;m, &amp;x);
+    if (m == (int)m &amp;&amp; m &gt; 0)
+    {
+        n = m;
+        while (n &gt; 0)
+        {
+            T = pow(x, n);
+            S3 = S3 &#43; T / giaithua(n);
+            n--;
+        }
+        printf(&#34;%lf&#34;,S3 &#43; 1);
+    }
+    else
+        printf(&#34;Error&#34;);
+}</code><div class=""><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">long</span> <span class="nf">giaithua</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">giaithua</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">S3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%lf%lf&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">==</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">T</span> <span class="o">=</span> <span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">S3</span> <span class="o">=</span> <span class="n">S3</span> <span class="o">+</span> <span class="n">T</span> <span class="o">/</span> <span class="n">giaithua</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">n</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span><span class="n">S3</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Error&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></div></div>
