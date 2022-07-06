@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='wireshark'><title>Lời giải CyberDefenders - WireDive - DHCP&amp;SMB</title>
+
+<link rel='canonical' href='https://iamironman1233.github.io/post/cyberdefenders-wiredive/'>
+
+<link rel="stylesheet" href="/scss/style.min.055858f62463445d6fac277ec777df81f7f51550613b2e486f39ee237cfd651a.css"><meta property='og:title' content='Lời giải CyberDefenders - WireDive - DHCP&amp;SMB'>
+<meta property='og:description' content='wireshark'>
+<meta property='og:url' content='https://iamironman1233.github.io/post/cyberdefenders-wiredive/'>
+<meta property='og:site_name' content='Spid3r&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-07-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-07-06T00:00:00&#43;00:00'/><meta property='og:image' content='https://iamironman1233.github.io/post/cyberdefenders-wiredive/logo1.png' />
+<meta name="twitter:title" content="Lời giải CyberDefenders - WireDive - DHCP&amp;SMB">
+<meta name="twitter:description" content="wireshark"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://iamironman1233.github.io/post/cyberdefenders-wiredive/logo1.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu2af0fd378d5dfd0ae02ceaaaa2c7e0e2_135256_300x0_resize_box_3.png" width="300"
+                            height="298" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Spid3r&#39;s Blog</a></h1>
+            <h2 class="site-description">Hack hoặc bị hack</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://www.facebook.com/tson.03'
+                        target="_blank"
+                        title="Facebook"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/iamironman1233'
+                        target="_blank"
+                        title="Github"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/son-dinh-thai-5a84581a2/'
+                        target="_blank"
+                        title="Linkedin"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="4" y="4" width="16" height="16" rx="2" />
+  <line x1="8" y1="11" x2="8" y2="16" />
+  <line x1="8" y1="8" x2="8" y2="8.01" />
+  <line x1="12" y1="16" x2="12" y2="11" />
+  <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About Spid3r</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/cyberdefenders-wiredive/">
+                <img src="/post/cyberdefenders-wiredive/logo1_huefc41ba2c307d1c7e6a585cf3b8a7f03_14942_800x0_resize_box_3.png"
+                        srcset="/post/cyberdefenders-wiredive/logo1_huefc41ba2c307d1c7e6a585cf3b8a7f03_14942_800x0_resize_box_3.png 800w, /post/cyberdefenders-wiredive/logo1_huefc41ba2c307d1c7e6a585cf3b8a7f03_14942_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="430" 
+                        loading="lazy"
+                        alt="Featured image of post Lời giải CyberDefenders - WireDive - DHCP&amp;SMB" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/cyberdefenders-wiredive/">Lời giải CyberDefenders - WireDive - DHCP&amp;SMB</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            wireshark
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 06, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><em>Lưu ý: Nên bật Dark mode</em></p>
+<h2 id="mô-tả">Mô tả</h2>
+<p><img src="/post/cyberdefenders-wiredive/1.png"
+	width="834"
+	height="374"
+	srcset="/post/cyberdefenders-wiredive/1_hu84752a5493fe2484e265324de15268d6_39073_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/1_hu84752a5493fe2484e265324de15268d6_39073_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="222"
+		data-flex-basis="535px"
+	
+></p>
+<p><em>Lưu ý: Ở mỗi bài sẽ có tên file cần sử dụng ở trước</em></p>
+<hr>
+<h3 id="dhcppcapng">dhcp.pcapng</h3>
+<p><em><strong>(DHCP có thể hiểu là Dynamic Host Configuration Protocol)</strong></em></p>
+<blockquote>
+<p>What IP address is requested by the client?</p>
+</blockquote>
+<p>Tiến hành mở file lên bằng <code>wireshark</code> và tìm địa chỉ IP được yêu cầu từ client</p>
+<p>Đọc trang <a class="link" href="https://wiki.wireshark.org/DHCP"  target="_blank" rel="noopener"
+    >DHCP</a> và <a class="link" href="https://www.wireshark.org/docs/dfref/b/bootp.html"  target="_blank" rel="noopener"
+    >Display Filter Reference: Bootstrap Protocol</a> và lọc <code>bootp.option.dhcp == 3</code> ta được:</p>
+<p><img src="/post/cyberdefenders-wiredive/2.png"
+	width="593"
+	height="435"
+	srcset="/post/cyberdefenders-wiredive/2_hu7fd16f6a2b2b865472999aae2ad84475_80622_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/2_hu7fd16f6a2b2b865472999aae2ad84475_80622_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="136"
+		data-flex-basis="327px"
+	
+></p>
+<p>&ndash;&gt; <strong><code>192.168.2.244</code></strong></p>
+<blockquote>
+<p>What is the transaction ID for the DHCP release?</p>
+</blockquote>
+<p>Lọc <code>bootp.option.dhcp</code> để gọi các gói DHCP ra, sau đó để ý kĩ phần Info ta được điều cần tìm</p>
+<p><img src="/post/cyberdefenders-wiredive/3.png"
+	width="1033"
+	height="240"
+	srcset="/post/cyberdefenders-wiredive/3_hu790309057af413e007a2c2b5c10fe485_55710_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/3_hu790309057af413e007a2c2b5c10fe485_55710_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="430"
+		data-flex-basis="1033px"
+	
+></p>
+<p>&ndash;&gt; <strong><code>0x9f8fa557</code></strong></p>
+<blockquote>
+<p>What is the MAC address of the client?</p>
+</blockquote>
+<p>Sử dụng lại phần của mục 1 - Request</p>
+<p><img src="/post/cyberdefenders-wiredive/4.png"
+	width="1057"
+	height="560"
+	srcset="/post/cyberdefenders-wiredive/4_huf317ae4d73c7ac84d7d9357e08889b1a_118700_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/4_huf317ae4d73c7ac84d7d9357e08889b1a_118700_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="188"
+		data-flex-basis="453px"
+	
+></p>
+<p>&ndash;&gt; <strong><code>00:0c:29:82:f5:94</code></strong></p>
+<h3 id="dnspcapng">dns.pcapng</h3>
+<blockquote>
+<p>What is the response for the lookup for flag.fruitinc.xyz?</p>
+</blockquote>
+<p>Lọc <code>dns.resp.name == &quot;flag.fruitinc.xyz&quot;</code></p>
+<p><img src="/post/cyberdefenders-wiredive/5.png"
+	width="771"
+	height="441"
+	srcset="/post/cyberdefenders-wiredive/5_hueb5d9b01344fcf98c6211e523e796bfb_71719_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/5_hueb5d9b01344fcf98c6211e523e796bfb_71719_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="419px"
+	
+></p>
+<p>&ndash;&gt; <strong><code>ACOOLDNSFLAG</code></strong></p>
+<blockquote>
+<p>Which root server responds to the query? Hostname.</p>
+</blockquote>
+<p>Check trong trang <a class="link" href="https://www.iana.org/domains/root/servers"  target="_blank" rel="noopener"
+    >DNS Root Servers</a> thì có thể thấy xuất hiện địa chỉ 192.203.230.10</p>
+<p><img src="/post/cyberdefenders-wiredive/6.png"
+	width="1033"
+	height="156"
+	srcset="/post/cyberdefenders-wiredive/6_hu7fd99b6763ed25a4917ef8d072b5dfa6_62110_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/6_hu7fd99b6763ed25a4917ef8d072b5dfa6_62110_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="662"
+		data-flex-basis="1589px"
+	
+></p>
+<p>và nó tương ứng với <code>e.root-servers.net</code> trên trang vừa rồi</p>
+<p>&ndash;&gt; <strong><code>e.root-servers.net</code></strong></p>
+<h2 id="smbpcapng">smb.pcapng</h2>
+<blockquote>
+<p>What is the path of the file that is opened?
+<em>(tìm đường dẫn của file được mở)</em></p>
+</blockquote>
+<p>Sử dụng <a class="link" href="https://wiki.wireshark.org/SMB2"  target="_blank" rel="noopener"
+    >List of SMB2 Opcodes</a> ta có thể thấy các yêu cầu đọc file được ký hiệu bằng opcode 0x08.</p>
+<p>Chúng ta sẽ áp dụng lọc <code>smb2.cmd == 8</code> và được</p>
+<p><img src="/post/cyberdefenders-wiredive/7.png"
+	width="1264"
+	height="260"
+	srcset="/post/cyberdefenders-wiredive/7_huebbcb207b7809b889f406bf3365f8542_107005_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/7_huebbcb207b7809b889f406bf3365f8542_107005_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="486"
+		data-flex-basis="1166px"
+	
+></p>
+<p>&ndash;&gt; <strong><code>HelloWorld\TradeSecrets.txt</code></strong></p>
+<blockquote>
+<p>What is the hex status code when the user SAMBA\jtomato logs in? *(trạng thái mã hex khi người dùng SAMBA\jtomato đăng nhập là gì?)</p>
+</blockquote>
+<p>Sử dụng <a class="link" href="https://wiki.wireshark.org/SMB2"  target="_blank" rel="noopener"
+    >List of SMB2 Opcodes</a> ta thấy rằng các thiết lập session được biểu thị bằng Opcode 0x01</p>
+<p>Lọc <code>smb2.cmd == 1</code> ta được:</p>
+<p><img src="/post/cyberdefenders-wiredive/8.png"
+	width="1292"
+	height="243"
+	srcset="/post/cyberdefenders-wiredive/8_hu18cf39edef55524fa4e8de376a874697_104706_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/8_hu18cf39edef55524fa4e8de376a874697_104706_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="531"
+		data-flex-basis="1276px"
+	
+></p>
+<p>Ở gói 75 có nhắc đến người dùng SAMBA\jtomato đăng nhập và ngay gói 76 đã có lỗi đăng nhập, check gói 76 thì ta được:</p>
+<p><img src="/post/cyberdefenders-wiredive/9.png"
+	width="456"
+	height="67"
+	srcset="/post/cyberdefenders-wiredive/9_huc434a08f6e5cec0b4f44792bee413973_10599_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/9_huc434a08f6e5cec0b4f44792bee413973_10599_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="680"
+		data-flex-basis="1633px"
+	
+></p>
+<p>&ndash;&gt; <strong><code>0xc000006d</code></strong></p>
+<blockquote>
+<p>What is the tree that is being browsed?</p>
+</blockquote>
+<p>Sử dụng <a class="link" href="https://wiki.wireshark.org/SMB2"  target="_blank" rel="noopener"
+    >List of SMB2 Opcodes</a> ta lọc bằng <code>smb2.cmd == 3</code>:</p>
+<p><img src="/post/cyberdefenders-wiredive/10.png"
+	width="1183"
+	height="132"
+	srcset="/post/cyberdefenders-wiredive/10_hu2baa995460674c2abb37cd458b82bfbe_35253_480x0_resize_box_3.png 480w, /post/cyberdefenders-wiredive/10_hu2baa995460674c2abb37cd458b82bfbe_35253_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="896"
+		data-flex-basis="2150px"
+	
+></p>
+<p>Mặc dù hiển thị có 2 yêu cầu Tree Connect (IPC$ và public), nhưng chia sẻ cuối cùng được duyệt là <code>public</code></p>
+<p>&ndash;&gt; <strong><code>\\192.168.2.10\public</code></strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Spid3r&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Create by Spid3r <br/>
+         <br />
+        
+    </section>
+</footer>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.2.7/dist/photoswipe.css"
+    integrity="sha256-olf9rfn3AG8zR6lkPXkN3PZq63z8tElx7Ela6T4eklo=" crossorigin="anonymous">
+
+<script type="module">
+    import StackGallery from '\/ts\/gallery.js';
+    import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.2.7/dist/photoswipe-lightbox.esm.min.js';
+    
+    console.log(StackGallery)
+    StackGallery(document.querySelector('.article-content'));
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '.article-content',
+        children: '.gallery-image a',
+        pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5.2.7/dist/photoswipe.esm.min.js')
+    });
+    lightbox.init();
+</script>
+
+            </main>
+    
+
+        </div>
+        <script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
