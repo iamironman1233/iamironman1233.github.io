@@ -315,7 +315,7 @@
 
 
                 <time class="article-time--reading">
-                    19 minute read
+                    20 minute read
                 </time>
             </div>
         
@@ -2475,6 +2475,168 @@ int main()
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div></div></div>
+<h2 id="bài-thực-hành-số-6---tin-đại-cương">Bài thực hành số 6 - Tin đại cương</h2>
+<h3 id="bài-601">Bài 6.01</h3>
+<div class="codeblock">
+    <header>
+        <span class="codeblock-lang">c</span>
+        <button 
+            class="codeblock-copy"
+            data-id="codeblock-id-28"
+            data-copied-text="Copied!"
+        >
+            Copy
+        </button>
+    </header>
+    <code id="codeblock-id-28" style="display:none;">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#define SIZE 256
+int main()
+{
+    char str1[100], str2[100];
+    scanf(&#34;%s\n%s&#34;, str1, str2);
+    int  COUNT[SIZE] = {0};
+    strcat(str1,str2);
+    int  len = strlen( str1 ), i;
+    for( i = 0; i &lt; len; i&#43;&#43; )
+        COUNT[(int)(str1[i])]&#43;&#43;;
+    for( i = 0; i &lt; SIZE; i&#43;&#43; )
+        if( COUNT[i] ) printf(&#34;%c&#34;, (char)(i));
+    printf(&#34;\n&#34;);
+    for( i = 0; i &lt; SIZE; i&#43;&#43; )
+        if( COUNT[i] )
+            printf( &#34;%-3d\n&#34;, COUNT[i] );
+    return 0;
+}</code><div class=""><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define SIZE 256
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">str1</span><span class="p">[</span><span class="mi">100</span><span class="p">],</span> <span class="n">str2</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">%s&#34;</span><span class="p">,</span> <span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span>  <span class="n">COUNT</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="n">strcat</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span><span class="n">str2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span>  <span class="n">len</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span> <span class="n">str1</span> <span class="p">),</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">COUNT</span><span class="p">[(</span><span class="kt">int</span><span class="p">)(</span><span class="n">str1</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">SIZE</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span> <span class="n">COUNT</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%c&#34;</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="p">)(</span><span class="n">i</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">SIZE</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span> <span class="n">COUNT</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">printf</span><span class="p">(</span> <span class="s">&#34;%-3d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">COUNT</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div></div>
+<h3 id="bài-602">Bài 6.02</h3>
+<div class="codeblock">
+    <header>
+        <span class="codeblock-lang">c</span>
+        <button 
+            class="codeblock-copy"
+            data-id="codeblock-id-29"
+            data-copied-text="Copied!"
+        >
+            Copy
+        </button>
+    </header>
+    <code id="codeblock-id-29" style="display:none;">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main()
+{
+    char str[100], flag[100];
+    int i, j = 0, k = 0;
+    fgets(str, 100, stdin);
+    while(str[k] == &#39; &#39;)
+        k&#43;&#43;;
+    for (i = k; i &lt; strlen(str); i&#43;&#43;)
+    {
+
+        if (str[i] == &#39; &#39;)
+        {
+            while (str[i &#43; 1] == &#39; &#39;)
+                i&#43;&#43;;
+        }
+        flag[j] = str[i];
+        j&#43;&#43;;
+    }
+    puts(flag);
+}</code><div class=""><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">100</span><span class="p">],</span> <span class="n">flag</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fgets</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">stdin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39; &#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39; &#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39; &#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">flag</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">puts</span><span class="p">(</span><span class="n">flag</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div></div>
+<h3 id="đợi-rảnh-thì-admin-update-dần-dần-">Đợi rảnh thì admin update dần dần =)))</h3>
 
 </section>
 
