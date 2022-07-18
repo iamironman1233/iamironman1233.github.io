@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Writeups Access Denied CTF 2022'><title>Access Denied CTF 2022</title>
+
+<link rel='canonical' href='/post/access_denied_2022_ctf/'>
+
+<link rel="stylesheet" href="/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css"><meta property='og:title' content='Access Denied CTF 2022'>
+<meta property='og:description' content='Writeups Access Denied CTF 2022'>
+<meta property='og:url' content='/post/access_denied_2022_ctf/'>
+<meta property='og:site_name' content='Spid3r&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-06-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-06-17T00:00:00&#43;00:00'/><meta property='og:image' content='/post/access_denied_2022_ctf/logo.png' />
+<meta name="twitter:title" content="Access Denied CTF 2022">
+<meta name="twitter:description" content="Writeups Access Denied CTF 2022"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='/post/access_denied_2022_ctf/logo.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue239a16d5b93928cff4a31a049f32084_481697_300x0_resize_box_3.png" width="300"
+                            height="302" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Spid3r&#39;s Blog</a></h1>
+            <h2 class="site-description">Hack hoặc bị hack</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/iamironman1233'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/son-dinh-thai-5a84581a2/'
+                        target="_blank"
+                        title="LinkedIn"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="4" y="4" width="16" height="16" rx="2" />
+  <line x1="8" y1="11" x2="8" y2="16" />
+  <line x1="8" y1="8" x2="8" y2="8.01" />
+  <line x1="12" y1="16" x2="12" y2="11" />
+  <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=sondinh99999@gmail.com'
+                        target="_blank"
+                        title="Mail"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-gmail" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M16 20h3a1 1 0 0 0 1 -1v-14a1 1 0 0 0 -1 -1h-3v16z" />
+  <path d="M5 20h3v-16h-3a1 1 0 0 0 -1 1v14a1 1 0 0 0 1 1z" />
+  <path d="M16 4l-4 4l-4 -4" />
+  <path d="M4 6.5l8 7.5l8 -7.5" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>Admin</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/hacker/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-off" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="3" y1="3" x2="21" y2="21" />
+  <path d="M17.669 17.669a12 12 0 0 1 -5.669 3.331a12 12 0 0 1 -8.5 -15c.797 .036 1.589 0 2.366 -.126m3.092 -.912a12 12 0 0 0 3.042 -1.962a12 12 0 0 0 8.5 3a12 12 0 0 1 -1.117 9.379" />
+</svg>
+                
+                <span>Hacker</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/access_denied_2022_ctf/">
+                <img src="/post/access_denied_2022_ctf/logo_hu685294f15e91ea13d866d0a5f7fefb7d_198408_800x0_resize_box_3.png"
+                        srcset="/post/access_denied_2022_ctf/logo_hu685294f15e91ea13d866d0a5f7fefb7d_198408_800x0_resize_box_3.png 800w, /post/access_denied_2022_ctf/logo_hu685294f15e91ea13d866d0a5f7fefb7d_198408_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="247" 
+                        loading="lazy"
+                        alt="Featured image of post Access Denied CTF 2022" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/access_denied_2022_ctf/">Access Denied CTF 2022</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Writeups Access Denied CTF 2022
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 17, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    13 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><em>Thu, 09 June 2022, 23:30 SST — Sat, 11 June 2022, 23:30 SST - On-line</em></p>
+<p><img src="/post/access_denied_2022_ctf/1.png"
+	width="553"
+	height="480"
+	srcset="/post/access_denied_2022_ctf/1_hu02325e72f69a760fa351df236c38a5ed_14981_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/1_hu02325e72f69a760fa351df236c38a5ed_14981_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="115"
+		data-flex-basis="276px"
+	
+></p>
+<p>Dưới đây là các bài mình đã giải được :3</p>
+<h2 id="misc">Misc</h2>
+<h4 id="shark1">[shark1]</h4>
+<p>Ở bài misc đầu tiên, chúng ta nhận được 1 file .pcapng tiến hành mở file bằng wireshark, ta thu được</p>
+<p><img src="/post/access_denied_2022_ctf/2.png"
+	width="1916"
+	height="892"
+	srcset="/post/access_denied_2022_ctf/2_hu7a42e57134e27096c89eda819cb8c752_254354_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/2_hu7a42e57134e27096c89eda819cb8c752_254354_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="214"
+		data-flex-basis="515px"
+	
+></p>
+<p>Mình kiểm tra 1 vài TCP Protocol thì nhận được:</p>
+<p><img src="/post/access_denied_2022_ctf/3.png"
+	width="695"
+	height="227"
+	srcset="/post/access_denied_2022_ctf/3_hu5f3a06d0dfceb9c0658f402440b8cb26_53962_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/3_hu5f3a06d0dfceb9c0658f402440b8cb26_53962_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="306"
+		data-flex-basis="734px"
+	
+></p>
+<p>&ndash;&gt; follow TCP (Follow –&gt; TCP Stream)</p>
+<p><img src="/post/access_denied_2022_ctf/4.png"
+	width="955"
+	height="138"
+	srcset="/post/access_denied_2022_ctf/4_hu9168bb11d0f01ea781b1c07c91c0a365_21272_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/4_hu9168bb11d0f01ea781b1c07c91c0a365_21272_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="692"
+		data-flex-basis="1660px"
+	
+></p>
+<p>Vậy là chúng ta sẽ phải biến đổi cụm flag kia thông qua XOR với xor key = 80 Sử dụng trang <a class="link" href="https://cyberchef.org/"  target="_blank" rel="noopener"
+    >CyberChef</a> và điền các thông số vào</p>
+<p><img src="/post/access_denied_2022_ctf/5.png"
+	width="1058"
+	height="544"
+	srcset="/post/access_denied_2022_ctf/5_hue4f4d897640014005ed92771c80d5a9f_25458_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/5_hue4f4d897640014005ed92771c80d5a9f_25458_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="194"
+		data-flex-basis="466px"
+	
+></p>
+<h5 id="-flag-accessdeniedw1r3sh4rk_b3st_f0r_p4ck3t_sn1ff1ng_9fc3841b1">–&gt; flag: accessdenied{w1r3sh4rk_b3st_f0r_p4ck3t_sn1ff1ng_9fc3841b1}</h5>
+<h4 id="bobs-favourite-number">[Bobs Favourite Number]</h4>
+<blockquote>
+<p>Bobs favourite numbers Bob likes two numbers 1856 (as his college was founded as the Civil Engineering College on 24 November 1856) and 2014 (as his college was renamed as Indian Institute of Engineering Science and Technology, Shibpur by the Govt. of India in March 2014). A number N is Bob’s favourite number if N is equal to the sum of a certain number of 1856 and sum of a certain number of 2014. Task: Print whether a number is Bob’s favourite number or not. Input: First line contains a single integer number N. Output: Print “Yes” if Favourite if N is Bob’s favourite number, else print “No”. Constraints: 1 &lt;= N &lt;= 10^9 Sample input: 5726 Sample output: Yes Sample explanation: 5726 can be represented as the sum of 1856 + 1856 + 2014.</p>
+</blockquote>
+<p>Ở bài này chúng ta chỉ nên để ý tới 2 số mà Bob thích đó là <code>1856</code> và <code>2014</code>. Ở ví dụ 5726 nhập vào là đúng vì 5726 = 1856 + 1856 + 2014 = 2*1856 + 2014</p>
+<p>Nên mình nghĩ nếu nhập 1 số có thể tách ra thành dạng a _ 1856 + b _ 2014 (a, b &gt;= 1) là sẽ được. Và đề có cho mình server: <code>nc 35.193.60.121 1337</code> Nên có lẽ các số được input vào sẽ ở trong này. Rất tiếc là server đã đóng nên mình không thể cho ảnh lên writeup được.</p>
+<p>Để tạo 1 hàm tính xem số được nhập vào có phải dưới dạng a _ 1856 + b _ 2014 không, thì code rất đơn giản bằng python:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">check</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(int(n<span style="color:#f92672">/</span><span style="color:#ae81ff">1856</span>)): <span style="color:#75715e">#đây là cách nhanh để tạo 1 vòng lặp và thử</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(n <span style="color:#f92672">-</span> (i<span style="color:#f92672">*</span><span style="color:#ae81ff">1856</span>))<span style="color:#f92672">%</span><span style="color:#ae81ff">2014</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span></code></pre></div><p>và <code>print(check(5726))</code> thì ta được kết quả là True. Thử kết nối tới server bằng netcat ta được kết quả trả về:</p>
+<pre tabindex="0"><code>168936
+Answer:
+</code></pre><p>Nhập Yes</p>
+<pre tabindex="0"><code>Good one
+</code></pre><pre tabindex="0"><code>2512426
+Answer:
+</code></pre><p>Nhập No</p>
+<pre tabindex="0"><code>Wrong Answer
+</code></pre><p>Vậy là khi chúng ta truy cập vào server, nó sẽ đưa chúng ta 1 số và thử, Tiếp theo chúng ta sẽ sử dụng đến Telnet để truy cập vào server của đề và thử các input đó</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> telnetlib
+</span></span><span style="display:flex;"><span>tn <span style="color:#f92672">=</span> telnetlib<span style="color:#f92672">.</span>Telnet(<span style="color:#e6db74">&#34;35.193.60.121&#34;</span>, <span style="color:#ae81ff">1337</span>)
+</span></span></code></pre></div><p>Code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">while</span>(<span style="color:#66d9ef">True</span>):
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">=</span> tn<span style="color:#f92672">.</span>read_until(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;Answer:&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;Good&#34;</span> <span style="color:#f92672">in</span> a:
+</span></span><span style="display:flex;"><span>        num <span style="color:#f92672">=</span> int(a<span style="color:#f92672">.</span>split()[<span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        num <span style="color:#f92672">=</span> int(a<span style="color:#f92672">.</span>split()[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> check(num):
+</span></span><span style="display:flex;"><span>        tn<span style="color:#f92672">.</span>write(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;Yes</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        tn<span style="color:#f92672">.</span>write(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;No</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p>Sau khi chạy xong các test sẽ trả về flag:</p>
+<h5 id="-flag-accessdeniedb0bs_f4v0r1t3_4r3_m1n3_f4v0urit3_t00_61c884c8">–&gt; flag: accessdenied{b0bs_f4v0r1t3_4r3_m1n3_f4v0urit3_t00_61c884c8}</h5>
+<h2 id="crypto">Crypto</h2>
+<h4 id="rsa---1">[RSA - 1]</h4>
+<p>Ở bài đầu tiên của crypto chúng ta lại gặp 1 dạng quen thuộc đó là giải mã RSA, vì có tới 3 bài loại này cho nên RSA - 1 là dễ hơn hẳn Dữ liệu đề:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>p <span style="color:#f92672">=</span> <span style="color:#ae81ff">10428615258416108003372202871855627713663325599674460924186517713082197448534315449595394752587304354394402047262801959990727856908043138185588365886987557</span>
+</span></span><span style="display:flex;"><span>q <span style="color:#f92672">=</span> <span style="color:#ae81ff">8849030739304056868757301096931487921973840186794195322071503751716059434197468028088264340322992996182734000877348221433845302801843370163430108727308579</span>
+</span></span><span style="display:flex;"><span>e <span style="color:#f92672">=</span> <span style="color:#ae81ff">65537</span>
+</span></span><span style="display:flex;"><span>cipher_text <span style="color:#f92672">=</span> <span style="color:#ae81ff">84826403344972753121997388456739256614537789930909176473018827332005543366933391914385410712984001888365906754988120732970328825657318675360778107518188000885732104031648548997976916964730682864696944786364581243443475767387970255510475855029059715864139791778210784283726274424510221073880200865856769716576</span>
+</span></span></code></pre></div><p>Vậy là đề đã cho cả p, q, e và c. Ở đây chúng ta tính ra n bằng cách lấy p * q Tham khảo <a class="link" href="https://www.youtube.com/watch?v=WI5Ie36mUX0"  target="_blank" rel="noopener"
+    >video của mình</a> về loại bài này ta được code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>p <span style="color:#f92672">=</span> <span style="color:#ae81ff">8849030739304056868757301096931487921973840186794195322071503751716059434197468028088264340322992996182734000877348221433845302801843370163430108727308579</span>
+</span></span><span style="display:flex;"><span>q <span style="color:#f92672">=</span> <span style="color:#ae81ff">10428615258416108003372202871855627713663325599674460924186517713082197448534315449595394752587304354394402047262801959990727856908043138185588365886987557</span>
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> p<span style="color:#f92672">*</span>q
+</span></span><span style="display:flex;"><span>e <span style="color:#f92672">=</span> <span style="color:#ae81ff">65537</span>
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> <span style="color:#ae81ff">84826403344972753121997388456739256614537789930909176473018827332005543366933391914385410712984001888365906754988120732970328825657318675360778107518188000885732104031648548997976916964730682864696944786364581243443475767387970255510475855029059715864139791778210784283726274424510221073880200865856769716576</span>
+</span></span><span style="display:flex;"><span>d1 <span style="color:#f92672">=</span> (p<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span>(q<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> pow(e, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, d1)
+</span></span><span style="display:flex;"><span>flag <span style="color:#f92672">=</span> pow(c, d, n)
+</span></span><span style="display:flex;"><span>print(flag<span style="color:#f92672">.</span>to_bytes(<span style="color:#ae81ff">47</span>, <span style="color:#e6db74">&#39;big&#39;</span>))
+</span></span></code></pre></div><h5 id="-flag-accessdeniedrsa_1s_4m4z1ng_r1ght_2a5286af">–&gt; flag: accessdenied{RSA_1S_4M4Z1nG_R1GhT????_2a5286af}</h5>
+<h4 id="rsa-3">[RSA-3]</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>N1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">18266349196400324728796632198426724065863341515460128017379722167088811564142208540762217975696666190887534687486334974478770458134458646785682182438231047535912495200486295399237083743354006572775979196273345894016812147421648391560534928953791045301656072851030393661346227010573392017192092871743599780733618974144278058844414678104713310777338685821340236864598500469843212331330335171804328016140678014295178395686821469446312308097781506852568269309368807576215036130913554259546509277614896420588483929704110258122427731934119749960465772609969329231395097168664992720797902433454838999670183197496533599372453</span>
+</span></span><span style="display:flex;"><span>e1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">65537</span>
+</span></span><span style="display:flex;"><span>ct1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">6873813036805706192019236826822502457972771100457517090756917047060847774848540323350759250580238758998913544271128101335276213320240302206398066922772200444602226203653559017733029810367927075606003863202964202725297461799495530697341270915140044964898303984854574497628349362668695378519684693264593494716972185326436905495762497116849607924837994943127697112124217181161062684698865533001086211217060178202980704668203486578672364578669469712587269077695001297138207491663356223994825422557742042083843727850238507161657755737436196961552942941154267260840237025593539923533367161391402240798650010287812581011106</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>N2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">24659767524526013018768938973883991511377669248630968999008468264428208747461052247749924232027616129566843290411914770222062361142014390330463814302544910044772535448949923181736285951382305617780092296934319600643083108399436503551987425616568398265868184384255524744326852580109993750455923648308457300741311644056806840080239266629430170801800674692923486070263947659308964150022391540089059138911526148899685247042835949241530880572488161927637699425020944697998483747469309576045917038431425710502056969197916002745593176785614139365197372746789456581367558816039809574657471032143676431357391125588624599050493</span>
+</span></span><span style="display:flex;"><span>e2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">65537</span>
+</span></span><span style="display:flex;"><span>ct2 <span style="color:#f92672">=</span>  <span style="color:#ae81ff">11715772208083492702167997175167454009301340692399196360593824415816062365292031273728996255749695189978948242292097965040268601546052250584302206331424224398934005270192769085862845465718216946900897219973683677713043297722976307588263004621450861659350169718646844558379707749844428304916965303036455448719228506667752535085465025614399994834368259311922477097878143154258042140694172977284700008301528490157090476538427961683829505682126281348126157784828204887638985638647829395157101409725453166939388563809584382420835218557337222313577592617066209235421605768519128885685600282422644017925260843832358253267634</span>
+</span></span></code></pre></div><p>solve code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>N1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">18266349196400324728796632198426724065863341515460128017379722167088811564142208540762217975696666190887534687486334974478770458134458646785682182438231047535912495200486295399237083743354006572775979196273345894016812147421648391560534928953791045301656072851030393661346227010573392017192092871743599780733618974144278058844414678104713310777338685821340236864598500469843212331330335171804328016140678014295178395686821469446312308097781506852568269309368807576215036130913554259546509277614896420588483929704110258122427731934119749960465772609969329231395097168664992720797902433454838999670183197496533599372453</span>
+</span></span><span style="display:flex;"><span>e1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">65537</span>
+</span></span><span style="display:flex;"><span>ct1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">6873813036805706192019236826822502457972771100457517090756917047060847774848540323350759250580238758998913544271128101335276213320240302206398066922772200444602226203653559017733029810367927075606003863202964202725297461799495530697341270915140044964898303984854574497628349362668695378519684693264593494716972185326436905495762497116849607924837994943127697112124217181161062684698865533001086211217060178202980704668203486578672364578669469712587269077695001297138207491663356223994825422557742042083843727850238507161657755737436196961552942941154267260840237025593539923533367161391402240798650010287812581011106</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>N2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">24659767524526013018768938973883991511377669248630968999008468264428208747461052247749924232027616129566843290411914770222062361142014390330463814302544910044772535448949923181736285951382305617780092296934319600643083108399436503551987425616568398265868184384255524744326852580109993750455923648308457300741311644056806840080239266629430170801800674692923486070263947659308964150022391540089059138911526148899685247042835949241530880572488161927637699425020944697998483747469309576045917038431425710502056969197916002745593176785614139365197372746789456581367558816039809574657471032143676431357391125588624599050493</span>
+</span></span><span style="display:flex;"><span>e2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">65537</span>
+</span></span><span style="display:flex;"><span>ct2 <span style="color:#f92672">=</span>  <span style="color:#ae81ff">11715772208083492702167997175167454009301340692399196360593824415816062365292031273728996255749695189978948242292097965040268601546052250584302206331424224398934005270192769085862845465718216946900897219973683677713043297722976307588263004621450861659350169718646844558379707749844428304916965303036455448719228506667752535085465025614399994834368259311922477097878143154258042140694172977284700008301528490157090476538427961683829505682126281348126157784828204887638985638647829395157101409725453166939388563809584382420835218557337222313577592617066209235421605768519128885685600282422644017925260843832358253267634</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> Crypto.Util.number <span style="color:#f92672">import</span> inverse, long_to_bytes, bytes_to_long
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> gmpy2 <span style="color:#f92672">import</span> mul,gcd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ProductTree</span>(s):
+</span></span><span style="display:flex;"><span>    l <span style="color:#f92672">=</span> len(s)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> l <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> l <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            s <span style="color:#f92672">+=</span> [<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>            l <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        s <span style="color:#f92672">=</span> list(map(mul, s[<span style="color:#ae81ff">0</span> : l <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span>], s[l <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">1</span> :]))
+</span></span><span style="display:flex;"><span>        l <span style="color:#f92672">=</span> len(s)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> s[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Find_factor</span>(pubs):
+</span></span><span style="display:flex;"><span>	priv_keys <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>	M <span style="color:#f92672">=</span> ProductTree(pubs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(pubs) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>		pub <span style="color:#f92672">=</span> pubs[i]
+</span></span><span style="display:flex;"><span>		R <span style="color:#f92672">=</span> M <span style="color:#f92672">//</span> pub
+</span></span><span style="display:flex;"><span>		g <span style="color:#f92672">=</span> gcd(pub, R)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> pub <span style="color:#f92672">&gt;</span> g <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>				p <span style="color:#f92672">=</span> g
+</span></span><span style="display:flex;"><span>				q <span style="color:#f92672">=</span> pub <span style="color:#f92672">//</span> g
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> p,q
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> ex:
+</span></span><span style="display:flex;"><span>				print(ex)
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p1,q1 <span style="color:#f92672">=</span> Find_factor([N1,N2])
+</span></span><span style="display:flex;"><span>p2,q2 <span style="color:#f92672">=</span> Find_factor([N2,N1])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>n1 <span style="color:#f92672">=</span> p1<span style="color:#f92672">*</span>q1
+</span></span><span style="display:flex;"><span>n2 <span style="color:#f92672">=</span> p2<span style="color:#f92672">*</span>q2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>phi1 <span style="color:#f92672">=</span> (p1<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (q1<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>phi2 <span style="color:#f92672">=</span> (p2<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (q2<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>d1 <span style="color:#f92672">=</span> inverse(e1, phi1)
+</span></span><span style="display:flex;"><span>d2 <span style="color:#f92672">=</span> inverse(e2, phi2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>m1 <span style="color:#f92672">=</span> pow(ct1, d1, n1)
+</span></span><span style="display:flex;"><span>m2 <span style="color:#f92672">=</span> pow(ct2, d2, n2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(long_to_bytes(m1)<span style="color:#f92672">+</span>long_to_bytes(m2))
+</span></span></code></pre></div><h5 id="-flag-accessdeniedr3us31ng_5tuff_1s_n0t_f0r_crypt0gr4phy_69c36434">–&gt; flag: accessdenied{r3us31ng_5tuff_1s_n0t_f0r_crypt0gr4phy_69c36434}</h5>
+<h2 id="rev">REV</h2>
+<h4 id="babyc">[babyc]</h4>
+<p>Ở bài này chúng ta sẽ đọc kĩ code và phân tích để đảo ngược lại flag đang được cho nhiễu ban đầu.</p>
+<p><em>Đọc file rev1.c</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define MAXSIZE 100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> flag[] <span style="color:#f92672">=</span> {<span style="color:#f92672">-</span><span style="color:#ae81ff">111</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">97</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">127</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">97</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">121</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">111</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">113</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">97</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">101</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">91</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">11</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">87</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> <span style="color:#a6e22e">reverse</span>(<span style="color:#66d9ef">char</span> ch) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">*=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>((ch <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i))) {
+</span></span><span style="display:flex;"><span>            x<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (<span style="color:#66d9ef">char</span>)x;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">encode</span>(<span style="color:#66d9ef">char</span> str[]) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> xor <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; str[i] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\0&#39;</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        str[i] <span style="color:#f92672">=</span> reverse(str[i]);
+</span></span><span style="display:flex;"><span>        str[i] <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span>)(xor <span style="color:#f92672">^</span> str[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> str[MAXSIZE];
+</span></span><span style="display:flex;"><span>    scanf(<span style="color:#e6db74">&#34;%100s&#34;</span>, str);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    getchar();
+</span></span><span style="display:flex;"><span>    encode(str);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(strcmp(flag, str) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>){
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;Access Granted :(&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;Access Denied :)&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>có thể thấy từ void <code>reverse</code> ta có 1 phần tử của flag (lấy trường hợp cụ thể là <strong>flag[0]</strong>) khi chạy qua <code>reverse</code> sẽ tiếp tục chạy thêm vòng lặp gồm 8 loop (0 –&gt;7) sẽ biến đổi:</p>
+<p>Ví dụ a (text) –&gt; 01100001 (binary) và qua 8 lần so sánh với 00000001 (và các cách dịch chuyển sang trái 1 bit của nó) thì ta được biến x lúc này thành: ( ( ( ( 0 _ 2 + 1 )_ 2 _ 2 _ 2 _ 2) _ 2 + 1) _ 2 + 1) _ 2 = 134</p>
+<p>và ngay cuối hàm ta thấy ép kiểu x sang <code>char</code> nên lúc này x mặc định để ta tính là: 10001100.</p>
+<p>Tiếp theo từ việc <code>encode</code> flag (ta coi là đang encode 1 phần tử flag[0]) ta thấy rằng trong hàm encode sẽ có reverse (bước trên đã làm) và biến đổi flag[0] lúc này bằng: <code>xr ^ flag[0]</code> (đã được ép kiểu sang char và xr ở đây bằng 23(dec) –&gt; 00010111(bin))</p>
+<p>Chúng ta sẽ tiến hành in thử flag ra thì được: <code>æ╤╤▒┘┘1▒aü▒1╔ φ;a1φY█y█Y╗█φæY█φq╣aφ¢11 [╗ ▒⌐</code></p>
+<p>Mình nghĩ đây là flag đã được biến đổi giống như chúng ta encode và reverse <code>str</code>.</p>
+<p>Thật vậy, mình với kinh nghiệm làm các bài trước thì đã biết form của flag là <code>accessdenied{}</code> nên mình thử nhập str là <code>a</code> thêm <code>printf(&quot;%s&quot;, flag)</code> thì đều thu được đầu ra là 2 kí tự giống hệt nhau <code>æ æ</code>.</p>
+<p>mình thử ẩn dòng <code>str[i] = (char)(xr ^ str[i]);</code>dưới comment và thêm thử hàm <code>decode</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">decode</span>(<span style="color:#66d9ef">char</span> flag[]) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i, xor <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>( i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; flag[i] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\0&#39;</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        str[i] <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span>)(xor <span style="color:#f92672">^</span> flag[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>đến đây flag và str vẫn giống nhau. nên mình nhận ra có điều gì đó chúng ta có thể rút gọn được</p>
+<p>và mình để ý 1 chút ở số 134 ở bên trên thì đổi ra thành 01100001 và đúng bằng decode(flag[0]) được đảo ngược lại</p>
+<p>vậy nên mình nghĩ chỉ cần sử dụng hàm decode(flag) và đảo ngược lại nó là xong</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> flag[] <span style="color:#f92672">=</span> {<span style="color:#f92672">-</span><span style="color:#ae81ff">111</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">97</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">127</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">97</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">121</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">111</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">113</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">97</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">101</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">91</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">11</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">87</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> xr <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>, i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; flag[i] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\0&#39;</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        flag[i] <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>)(xr <span style="color:#f92672">^</span> flag[i]);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (flag[i] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            flag[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">256</span> <span style="color:#f92672">+</span> flag[i];
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//ở đây sẽ không thêm trường hợp của số dương vì mình thử thì thấy thế =))
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        printf(<span style="color:#e6db74">&#34;%d, &#34;</span>, flag[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><em>Chuyển dãy số kết quả về nhị phân</em></p>
+<blockquote>
+<p>mình sử dụng C++ cho đơn giản, còn nếu bạn nào muốn chạy từng số 1 có thể dùng tool</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>using namespace std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> flag[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">134</span>, <span style="color:#ae81ff">198</span>, <span style="color:#ae81ff">198</span>, <span style="color:#ae81ff">166</span>, <span style="color:#ae81ff">206</span>, <span style="color:#ae81ff">206</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">166</span>, <span style="color:#ae81ff">118</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">166</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">222</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">44</span>, <span style="color:#ae81ff">118</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">204</span>, <span style="color:#ae81ff">110</span>, <span style="color:#ae81ff">204</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">172</span>, <span style="color:#ae81ff">204</span>, <span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">134</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">204</span>, <span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">102</span>, <span style="color:#ae81ff">174</span>, <span style="color:#ae81ff">118</span>, <span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">76</span>, <span style="color:#ae81ff">172</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">166</span>, <span style="color:#ae81ff">190</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">DecimalToBinary</span>(<span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span> binaryNumber[<span style="color:#ae81ff">100</span>], num<span style="color:#f92672">=</span>n;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">while</span> (n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>      binaryNumber[i] <span style="color:#f92672">=</span> n <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>      n <span style="color:#f92672">=</span> n <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>      i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span> j;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">for</span> (j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; j<span style="color:#f92672">--</span>)
+</span></span><span style="display:flex;"><span>   cout<span style="color:#f92672">&lt;&lt;</span>binaryNumber[j];
+</span></span><span style="display:flex;"><span>   cout<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">46</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        DecimalToBinary(flag[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Sau khi chuyển dãy trên về số nhị phân ta thu được dãy nhị phân như sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ae81ff">10000110</span> <span style="color:#ae81ff">11000110</span> <span style="color:#ae81ff">11000110</span> <span style="color:#ae81ff">10100110</span> <span style="color:#ae81ff">11001110</span> <span style="color:#ae81ff">11001110</span> <span style="color:#ae81ff">100110</span> <span style="color:#ae81ff">10100110</span> <span style="color:#ae81ff">1110110</span> <span style="color:#ae81ff">10010110</span> <span style="color:#ae81ff">10100110</span> <span style="color:#ae81ff">100110</span> <span style="color:#ae81ff">11011110</span> <span style="color:#ae81ff">11110</span> <span style="color:#ae81ff">1100</span> <span style="color:#ae81ff">1001110</span> <span style="color:#ae81ff">11111010</span> <span style="color:#ae81ff">101100</span> <span style="color:#ae81ff">1110110</span> <span style="color:#ae81ff">100110</span> <span style="color:#ae81ff">11111010</span> <span style="color:#ae81ff">1001110</span> <span style="color:#ae81ff">11001100</span> <span style="color:#ae81ff">1101110</span> <span style="color:#ae81ff">11001100</span> <span style="color:#ae81ff">1001110</span> <span style="color:#ae81ff">10101100</span> <span style="color:#ae81ff">11001100</span> <span style="color:#ae81ff">11111010</span> <span style="color:#ae81ff">10000110</span> <span style="color:#ae81ff">1001110</span> <span style="color:#ae81ff">11001100</span> <span style="color:#ae81ff">11111010</span> <span style="color:#ae81ff">1100110</span> <span style="color:#ae81ff">10101110</span> <span style="color:#ae81ff">1110110</span> <span style="color:#ae81ff">11111010</span> <span style="color:#ae81ff">10001100</span> <span style="color:#ae81ff">100110</span> <span style="color:#ae81ff">100110</span> <span style="color:#ae81ff">11100</span> <span style="color:#ae81ff">1001100</span> <span style="color:#ae81ff">10101100</span> <span style="color:#ae81ff">11100</span> <span style="color:#ae81ff">10100110</span> <span style="color:#ae81ff">10111110</span>
+</span></span></code></pre></div><p><em>Đảo ngược chuỗi nhị phân để tìm ra flag</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>using namespace std;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">str_reverse</span>(<span style="color:#66d9ef">char</span> str[]) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> lo <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> length;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (length <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; str[length] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\0&#39;</span> ; length<span style="color:#f92672">++</span>) {}
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> ( lo <span style="color:#f92672">&lt;</span> length ) {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--</span>length;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> tmp <span style="color:#f92672">=</span> str[lo];
+</span></span><span style="display:flex;"><span>    str[lo] <span style="color:#f92672">=</span> str[length];
+</span></span><span style="display:flex;"><span>    str[length] <span style="color:#f92672">=</span> tmp;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">++</span>lo;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> str[<span style="color:#ae81ff">100</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (i  <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span>  str;
+</span></span><span style="display:flex;"><span>    str_reverse(str);
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> str <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>    i<span style="color:#f92672">--</span>;}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Thu được dãy:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ae81ff">01100001</span> <span style="color:#ae81ff">01100011</span> <span style="color:#ae81ff">01100011</span> <span style="color:#ae81ff">01100101</span> <span style="color:#ae81ff">01110011</span> <span style="color:#ae81ff">01110011</span> <span style="color:#ae81ff">01100100</span> <span style="color:#ae81ff">01100101</span> <span style="color:#ae81ff">01101110</span> <span style="color:#ae81ff">01101001</span> <span style="color:#ae81ff">01100101</span> <span style="color:#ae81ff">01100100</span> <span style="color:#ae81ff">01111011</span> <span style="color:#ae81ff">01111000</span> <span style="color:#ae81ff">00110000</span> <span style="color:#ae81ff">01110010</span> <span style="color:#ae81ff">01011111</span> <span style="color:#ae81ff">00110100</span> <span style="color:#ae81ff">01101110</span> <span style="color:#ae81ff">01100100</span> <span style="color:#ae81ff">01011111</span> <span style="color:#ae81ff">01110010</span> <span style="color:#ae81ff">00110011</span> <span style="color:#ae81ff">01110110</span> <span style="color:#ae81ff">00110011</span> <span style="color:#ae81ff">01110010</span> <span style="color:#ae81ff">00110101</span> <span style="color:#ae81ff">00110011</span> <span style="color:#ae81ff">01011111</span> <span style="color:#ae81ff">01100001</span> <span style="color:#ae81ff">01110010</span> <span style="color:#ae81ff">00110011</span> <span style="color:#ae81ff">01011111</span> <span style="color:#ae81ff">01100110</span> <span style="color:#ae81ff">01110101</span> <span style="color:#ae81ff">01101110</span> <span style="color:#ae81ff">01011111</span> <span style="color:#ae81ff">00110001</span> <span style="color:#ae81ff">01100100</span> <span style="color:#ae81ff">01100100</span> <span style="color:#ae81ff">00111000</span> <span style="color:#ae81ff">00110010</span> <span style="color:#ae81ff">00110101</span> <span style="color:#ae81ff">00111000</span> <span style="color:#ae81ff">01100101</span> <span style="color:#ae81ff">01111101</span>
+</span></span></code></pre></div><p>Sử dụng trang <a class="link" href="https://www.rapidtables.com/convert/number/binary-to-ascii.html"  target="_blank" rel="noopener"
+    >web</a> này để xử lý nốt phần còn lại và thu được flag.</p>
+<h5 id="-flag-accessdeniedx0r_4nd_r3v3r53_ar3_fun_1dd8258e">—&gt; flag: accessdenied{x0r_4nd_r3v3r53_ar3_fun_1dd8258e}</h5>
+<p>Trên đó là cách giải chay như lúc mình nghĩ ra, còn khi vào làm thực sự thì chúng ta chỉ cần sử dụng việc giải ngược lại của flag là done. Code để đảo ngược:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">46</span>;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> flag[i];
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%c&#34;</span>, reverse(<span style="color:#ae81ff">23</span> <span style="color:#f92672">^</span> flag[i]));
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>solve code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define MAXSIZE 100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> flag[] <span style="color:#f92672">=</span> {<span style="color:#f92672">-</span><span style="color:#ae81ff">111</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">97</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">127</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">97</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">121</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">111</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">113</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">97</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">101</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">91</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">11</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">87</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> <span style="color:#a6e22e">reverse</span>(<span style="color:#66d9ef">char</span> ch)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">*=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ((ch <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i)))
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            x<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (<span style="color:#66d9ef">char</span>)x;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">encode</span>(<span style="color:#66d9ef">char</span> str[])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> xr <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span>, i;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; str[i] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;\0&#39;</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        str[i] <span style="color:#f92672">=</span> reverse(str[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> str[MAXSIZE];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">46</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> flag[i];
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%c&#34;</span>, reverse(<span style="color:#ae81ff">23</span> <span style="color:#f92672">^</span> flag[i]));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    getchar();
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;%s&#34;</span>, flag);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Cách khác bằng python (ngắn gọn)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>flag <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">111</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">47</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">97</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">127</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">97</span>, <span style="color:#ae81ff">49</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">121</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">111</span>, <span style="color:#ae81ff">89</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">37</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">113</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">71</span>, <span style="color:#ae81ff">97</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">19</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">101</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">91</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">69</span>, <span style="color:#ae81ff">11</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">79</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">87</span>]
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">46</span>)]
+</span></span><span style="display:flex;"><span>b<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">46</span>)]
+</span></span><span style="display:flex;"><span>c<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">46</span>)]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">one</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,len(flag),<span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>        flag[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">23</span> <span style="color:#f92672">^</span> flag[i]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (flag[i] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>            flag[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">256</span> <span style="color:#f92672">+</span> flag[i]
+</span></span><span style="display:flex;"><span>        a[i] <span style="color:#f92672">=</span> flag[i]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>one()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_bin</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range (<span style="color:#ae81ff">0</span>,len(a),<span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>        b[i]<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{0:08b}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(a[i])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>to_bin()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range (<span style="color:#ae81ff">0</span>,len(b),<span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>    c[i]<span style="color:#f92672">=</span>b[i][::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>    print(c[i])
+</span></span></code></pre></div><h4 id="bits-are-fun">[Bits are Fun]</h4>
+<p>Làm tương tự như bài rev1 và tham khảo thêm về hàm strncmp ta được code như sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define MAXSIZE 100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> flag[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">105</span>, <span style="color:#ae81ff">97</span>, <span style="color:#ae81ff">103</span>, <span style="color:#ae81ff">115</span>, <span style="color:#ae81ff">113</span>, <span style="color:#ae81ff">102</span>, <span style="color:#ae81ff">103</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">97</span>, <span style="color:#ae81ff">111</span>, <span style="color:#ae81ff">108</span>, <span style="color:#ae81ff">113</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">108</span>, <span style="color:#ae81ff">118</span>, <span style="color:#ae81ff">119</span>, <span style="color:#ae81ff">112</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">118</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">116</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">117</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">127</span>, <span style="color:#ae81ff">112</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">103</span>, <span style="color:#ae81ff">96</span>, <span style="color:#ae81ff">118</span>, <span style="color:#ae81ff">125</span>, <span style="color:#ae81ff">112</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">118</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">116</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">119</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">119</span>, <span style="color:#ae81ff">98</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">119</span>, <span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">97</span>, <span style="color:#ae81ff">102</span>, <span style="color:#ae81ff">103</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">117</span>, <span style="color:#ae81ff">97</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">left_rotate_and_right_rotate</span>(<span style="color:#66d9ef">char</span> str[]) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i, len <span style="color:#f92672">=</span> strlen(str);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>((i <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> j, store <span style="color:#f92672">=</span> ((((<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i) <span style="color:#f92672">&amp;</span> str[len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">?</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>; j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; j<span style="color:#f92672">--</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> bit <span style="color:#f92672">=</span> ((((<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i) <span style="color:#f92672">&amp;</span> str[j]) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">?</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>                str[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">&amp;=</span> (<span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i));
+</span></span><span style="display:flex;"><span>                str[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i) <span style="color:#f92672">*</span> bit;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            str[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&amp;=</span> (<span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i));
+</span></span><span style="display:flex;"><span>            str[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i) <span style="color:#f92672">*</span> store;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> j, store <span style="color:#f92672">=</span> ((((<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i) <span style="color:#f92672">&amp;</span> str[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">?</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> len; j<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> bit <span style="color:#f92672">=</span> ((((<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i) <span style="color:#f92672">&amp;</span> str[j]) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">?</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>                str[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">&amp;=</span> (<span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i));
+</span></span><span style="display:flex;"><span>                str[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i) <span style="color:#f92672">*</span> bit;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            str[len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">&amp;=</span> (<span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i));
+</span></span><span style="display:flex;"><span>            str[len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">|=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i) <span style="color:#f92672">*</span> store;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>(str);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>tmp;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1000</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        tmp <span style="color:#f92672">=</span> left_rotate_and_right_rotate(flag);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(strncmp(tmp,<span style="color:#e6db74">&#34;accessdenied&#34;</span>,<span style="color:#ae81ff">12</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            printf(<span style="color:#e6db74">&#34;%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,tmp);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="-flag-accessdeniedl3ft_r0t4t3_4nd_r1ght_r0t4t35_4r3_h4rd_5a43cfe4">–&gt; flag: accessdenied{l3ft_r0t4t3_4nd_r1ght_r0t4t35_4r3_h4rd_5a43cfe4}</h5>
+<h4 id="enormous">[enormous]</h4>
+<p>Ở bài này thì đơn giản ở chỗ chúng ta sử dụng IDA (bản nào cũng được nhưng phải là bản thích hợp :&gt;) để tìm ra flag 1 cách dễ dàng.</p>
+<p><img src="/post/access_denied_2022_ctf/6.png"
+	width="387"
+	height="420"
+	srcset="/post/access_denied_2022_ctf/6_hueb5f24cb4123873c783280ac73f6fb58_30530_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/6_hueb5f24cb4123873c783280ac73f6fb58_30530_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="92"
+		data-flex-basis="221px"
+	
+></p>
+<p>Dễ thấy trong mục function không có main nên mình cũng hơi mông lung 1 chút trong việc suy nghĩ liệu hàm main có bị ẩn đi hay không và nếu ẩn đi thì làm thế nào để mở được.</p>
+<p>Quay lại đề bài 1 chút, để ý rằng đề bài có nhắc đến <code>see the number</code></p>
+<p><img src="/post/access_denied_2022_ctf/7.png"
+	width="441"
+	height="290"
+	srcset="/post/access_denied_2022_ctf/7_hu437bc0b4e50956086aca6c06167bbf08_7555_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/7_hu437bc0b4e50956086aca6c06167bbf08_7555_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="364px"
+	
+></p>
+<p>Lúc đầu mình cũng không để ý lắm tới khi sử dụng lệnh <code>strings enormous</code> và hiện ra 1 loạt các dòng số và chữ</p>
+<p><img src="/post/access_denied_2022_ctf/8.png"
+	width="540"
+	height="783"
+	srcset="/post/access_denied_2022_ctf/8_hu3cfc756c71a39555de19cb4387c36b59_98222_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/8_hu3cfc756c71a39555de19cb4387c36b59_98222_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="68"
+		data-flex-basis="165px"
+	
+></p>
+<p>nên mình để ý tới các function ngay bên dưới có chứa các kí tự gồm số và chữ cái</p>
+<p><img src="/post/access_denied_2022_ctf/9.png"
+	width="195"
+	height="330"
+	srcset="/post/access_denied_2022_ctf/9_hu869afd781d0fa0839ec873ea734cf111_23270_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/9_hu869afd781d0fa0839ec873ea734cf111_23270_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="59"
+		data-flex-basis="141px"
+	
+></p>
+<p>Khi nhấn vào function đầu tiên thì hiện ra graph overview như sau:</p>
+<p><img src="/post/access_denied_2022_ctf/10.png"
+	width="240"
+	height="371"
+	srcset="/post/access_denied_2022_ctf/10_huf9eb9e721d17f912d99bc1ca02dc335d_20053_480x0_resize_box_3.png 480w, /post/access_denied_2022_ctf/10_huf9eb9e721d17f912d99bc1ca02dc335d_20053_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="64"
+		data-flex-basis="155px"
+	
+></p>
+<p>và với 1 người chơi hệ tâm linh như mình thì mình cảm nhận chữ <code>a</code> này hơi quen, hình như nó ở format của flag thì phải (<code>accessdenied{}</code>)</p>
+<p>mình tiếp tục xem các function tiếp theo lần lượt hiện c, c, e, s, s, … nên mình chắc ăn đây là flag và hoàn toàn chúng ta có thể chạy từng function một để ghép lại thành flag hoàn chỉnh</p>
+<h5 id="-flag-accessdeniedus3_angr_f0rm4klng_lif3_b3tt3r_57a27836-">–&gt; **flag: accessdenied{US3_AngR_F0RM4klnG_Lif3_B3Tt3R_57a27836} **</h5>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Spid3r&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Version 1.2 - Created by Spid3r <br/>
+        </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

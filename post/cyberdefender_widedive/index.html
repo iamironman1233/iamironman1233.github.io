@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='wireshark'><title>CyberDefenders - WireDive - DHCP&amp;SMB</title>
+
+<link rel='canonical' href='/post/cyberdefender_widedive/'>
+
+<link rel="stylesheet" href="/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css"><meta property='og:title' content='CyberDefenders - WireDive - DHCP&amp;SMB'>
+<meta property='og:description' content='wireshark'>
+<meta property='og:url' content='/post/cyberdefender_widedive/'>
+<meta property='og:site_name' content='Spid3r&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-07-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-07-06T00:00:00&#43;00:00'/><meta property='og:image' content='/post/cyberdefender_widedive/logo.png' />
+<meta name="twitter:title" content="CyberDefenders - WireDive - DHCP&amp;SMB">
+<meta name="twitter:description" content="wireshark"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='/post/cyberdefender_widedive/logo.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue239a16d5b93928cff4a31a049f32084_481697_300x0_resize_box_3.png" width="300"
+                            height="302" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Spid3r&#39;s Blog</a></h1>
+            <h2 class="site-description">Hack hoặc bị hack</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/iamironman1233'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/son-dinh-thai-5a84581a2/'
+                        target="_blank"
+                        title="LinkedIn"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="4" y="4" width="16" height="16" rx="2" />
+  <line x1="8" y1="11" x2="8" y2="16" />
+  <line x1="8" y1="8" x2="8" y2="8.01" />
+  <line x1="12" y1="16" x2="12" y2="11" />
+  <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mail.google.com/mail/u/0/?fs=1&amp;tf=cm&amp;source=mailto&amp;to=sondinh99999@gmail.com'
+                        target="_blank"
+                        title="Mail"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-gmail" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M16 20h3a1 1 0 0 0 1 -1v-14a1 1 0 0 0 -1 -1h-3v16z" />
+  <path d="M5 20h3v-16h-3a1 1 0 0 0 -1 1v14a1 1 0 0 0 1 1z" />
+  <path d="M16 4l-4 4l-4 -4" />
+  <path d="M4 6.5l8 7.5l8 -7.5" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>Admin</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/hacker/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-off" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="3" y1="3" x2="21" y2="21" />
+  <path d="M17.669 17.669a12 12 0 0 1 -5.669 3.331a12 12 0 0 1 -8.5 -15c.797 .036 1.589 0 2.366 -.126m3.092 -.912a12 12 0 0 0 3.042 -1.962a12 12 0 0 0 8.5 3a12 12 0 0 1 -1.117 9.379" />
+</svg>
+                
+                <span>Hacker</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/post/cyberdefender_widedive/">
+                <img src="/post/cyberdefender_widedive/logo_hu5b8e0356ca97540d21621b4b07355b08_221274_800x0_resize_box_3.png"
+                        srcset="/post/cyberdefender_widedive/logo_hu5b8e0356ca97540d21621b4b07355b08_221274_800x0_resize_box_3.png 800w, /post/cyberdefender_widedive/logo_hu5b8e0356ca97540d21621b4b07355b08_221274_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="431" 
+                        loading="lazy"
+                        alt="Featured image of post CyberDefenders - WireDive - DHCP&amp;SMB" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/cyberdefender_widedive/">CyberDefenders - WireDive - DHCP&amp;SMB</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            wireshark
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 06, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><em>Lưu ý: Nên bật Dark mode</em></p>
+<h3 id="mô-tả">Mô tả</h3>
+<p><img src="/post/cyberdefender_widedive/1.png"
+	width="834"
+	height="374"
+	srcset="/post/cyberdefender_widedive/1_hu84752a5493fe2484e265324de15268d6_39073_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/1_hu84752a5493fe2484e265324de15268d6_39073_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="222"
+		data-flex-basis="535px"
+	
+></p>
+<p><em>Lưu ý: Ở mỗi bài sẽ có tên file cần sử dụng ở trước</em></p>
+<hr>
+<h4 id="dhcppcapng">dhcp.pcapng</h4>
+<p><em>(DHCP có thể hiểu là Dynamic Host Configuration Protocol)</em></p>
+<blockquote>
+<p>What IP address is requested by the client?</p>
+</blockquote>
+<p>Tiến hành mở file lên bằng wireshark và tìm địa chỉ IP được yêu cầu từ client</p>
+<p>Đọc trang <a class="link" href="https://wiki.wireshark.org/DHCP"  target="_blank" rel="noopener"
+    >DHCP</a> và <a class="link" href="https://www.wireshark.org/docs/dfref/b/bootp.html"  target="_blank" rel="noopener"
+    >Display Filter Reference: Bootstrap Protocol</a> và lọc bootp.option.dhcp == 3 ta được:</p>
+<p><img src="/post/cyberdefender_widedive/2.png"
+	width="593"
+	height="435"
+	srcset="/post/cyberdefender_widedive/2_hu7fd16f6a2b2b865472999aae2ad84475_80622_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/2_hu7fd16f6a2b2b865472999aae2ad84475_80622_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="136"
+		data-flex-basis="327px"
+	
+></p>
+<p>–&gt; <code>192.168.2.244</code></p>
+<blockquote>
+<p>What is the transaction ID for the DHCP release?</p>
+</blockquote>
+<p>Lọc <code>bootp.option.dhcp</code> để gọi các gói DHCP ra, sau đó để ý kĩ phần Info ta được điều cần tìm</p>
+<p><img src="/post/cyberdefender_widedive/3.png"
+	width="1033"
+	height="240"
+	srcset="/post/cyberdefender_widedive/3_hu790309057af413e007a2c2b5c10fe485_55710_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/3_hu790309057af413e007a2c2b5c10fe485_55710_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="430"
+		data-flex-basis="1033px"
+	
+></p>
+<p>–&gt; <code>0x9f8fa557</code></p>
+<blockquote>
+<p>What is the MAC address of the client?</p>
+</blockquote>
+<p>Sử dụng lại phần của mục 1 - Request</p>
+<p><img src="/post/cyberdefender_widedive/4.png"
+	width="1057"
+	height="560"
+	srcset="/post/cyberdefender_widedive/4_huf317ae4d73c7ac84d7d9357e08889b1a_118700_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/4_huf317ae4d73c7ac84d7d9357e08889b1a_118700_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="188"
+		data-flex-basis="453px"
+	
+></p>
+<p>–&gt; <code>00:0c:29:82:f5:94</code></p>
+<h4 id="dnspcapng">dns.pcapng</h4>
+<blockquote>
+<p>What is the response for the lookup for flag.fruitinc.xyz?</p>
+</blockquote>
+<p>Lọc <code>dns.resp.name == &quot;flag.fruitinc.xyz&quot;</code></p>
+<p><img src="/post/cyberdefender_widedive/5.png"
+	width="771"
+	height="441"
+	srcset="/post/cyberdefender_widedive/5_hueb5d9b01344fcf98c6211e523e796bfb_71719_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/5_hueb5d9b01344fcf98c6211e523e796bfb_71719_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="419px"
+	
+></p>
+<p>–&gt; <code>ACOOLDNSFLAG</code></p>
+<blockquote>
+<p>Which root server responds to the query? Hostname.</p>
+</blockquote>
+<p>Check trong trang <a class="link" href="https://www.iana.org/domains/root/servers"  target="_blank" rel="noopener"
+    >DNS Root Servers</a> thì có thể thấy xuất hiện địa chỉ 192.203.230.10</p>
+<p><img src="/post/cyberdefender_widedive/6.png"
+	width="1033"
+	height="156"
+	srcset="/post/cyberdefender_widedive/6_hu7fd99b6763ed25a4917ef8d072b5dfa6_62110_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/6_hu7fd99b6763ed25a4917ef8d072b5dfa6_62110_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="662"
+		data-flex-basis="1589px"
+	
+></p>
+<p>và nó tương ứng với <code>e.root-servers.net</code> trên trang vừa rồi</p>
+<p>–&gt; <code>e.root-servers.net</code></p>
+<h4 id="smbpcapng">smb.pcapng</h4>
+<blockquote>
+<p>What is the path of the file that is opened? (tìm đường dẫn của file được mở)</p>
+</blockquote>
+<p>Sử dụng <a class="link" href="https://wiki.wireshark.org/SMB2"  target="_blank" rel="noopener"
+    >List of SMB2 Opcodes</a> ta có thể thấy các yêu cầu đọc file được ký hiệu bằng opcode 0x08.</p>
+<p>Chúng ta sẽ áp dụng lọc <code>smb2.cmd == 8</code> và được</p>
+<p><img src="/post/cyberdefender_widedive/7.png"
+	width="1264"
+	height="260"
+	srcset="/post/cyberdefender_widedive/7_huebbcb207b7809b889f406bf3365f8542_107005_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/7_huebbcb207b7809b889f406bf3365f8542_107005_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="486"
+		data-flex-basis="1166px"
+	
+></p>
+<p>–&gt; <code>HelloWorld\TradeSecrets.txt</code></p>
+<blockquote>
+<p>What is the hex status code when the user SAMBA\jtomato logs in? (trạng thái mã hex khi người dùng SAMBA\jtomato đăng nhập là gì?)?</p>
+</blockquote>
+<p>Sử dụng <a class="link" href="https://wiki.wireshark.org/SMB2"  target="_blank" rel="noopener"
+    >List of SMB2 Opcodes</a> ta có thể thấy các yêu cầu đọc file được ký hiệu bằng opcode 0x01.</p>
+<p>Lọc <code>smb2.cmd == 1</code> ta được:</p>
+<p><img src="/post/cyberdefender_widedive/8.png"
+	width="1292"
+	height="243"
+	srcset="/post/cyberdefender_widedive/8_hu18cf39edef55524fa4e8de376a874697_104706_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/8_hu18cf39edef55524fa4e8de376a874697_104706_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="531"
+		data-flex-basis="1276px"
+	
+></p>
+<p>Ở gói 75 có nhắc đến người dùng SAMBA\jtomato đăng nhập và ngay gói 76 đã có lỗi đăng nhập, check gói 76 thì ta được:</p>
+<p><img src="/post/cyberdefender_widedive/9.png"
+	width="456"
+	height="67"
+	srcset="/post/cyberdefender_widedive/9_huc434a08f6e5cec0b4f44792bee413973_10599_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/9_huc434a08f6e5cec0b4f44792bee413973_10599_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="680"
+		data-flex-basis="1633px"
+	
+></p>
+<p>–&gt; <code>0xc000006d</code></p>
+<blockquote>
+<p>What is the tree that is being browsed?</p>
+</blockquote>
+<p>Sử dụng <a class="link" href="https://wiki.wireshark.org/SMB2"  target="_blank" rel="noopener"
+    >List of SMB2 Opcodes</a> ta lọc bằng <code>smb2.cmd == 3</code>:</p>
+<p><img src="/post/cyberdefender_widedive/10.png"
+	width="1183"
+	height="132"
+	srcset="/post/cyberdefender_widedive/10_hu2baa995460674c2abb37cd458b82bfbe_35253_480x0_resize_box_3.png 480w, /post/cyberdefender_widedive/10_hu2baa995460674c2abb37cd458b82bfbe_35253_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="896"
+		data-flex-basis="2150px"
+	
+></p>
+<p>Mặc dù hiển thị có 2 yêu cầu Tree Connect (IPC$ và public), nhưng chia sẻ cuối cùng được duyệt là <code>public</code></p>
+<p>–&gt; <code>\\192.168.2.10\public</code></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Spid3r&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Version 1.2 - Created by Spid3r <br/>
+        </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
