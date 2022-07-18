@@ -1,39 +1,220 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Pages on Spid3r hack dạo</title>
-        <link>https://iamironman1233.github.io/page/</link>
-        <description>Recent content in Pages on Spid3r hack dạo</description>
+        <title>Pages on Spid3r&#39;s Blog</title>
+        <link>/page/</link>
+        <description>Recent content in Pages on Spid3r&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Sat, 18 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://iamironman1233.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>About Spid3r</title>
-        <link>https://iamironman1233.github.io/page/about/</link>
+        <lastBuildDate>Thu, 07 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hacker</title>
+        <link>/page/hacker/</link>
+        <pubDate>Thu, 07 Jul 2022 00:00:00 +0000</pubDate>
+        
+        <guid>/page/hacker/</guid>
+        <description>&lt;h3 id=&#34;hacker-là-gì&#34;&gt;Hacker là gì?&lt;/h3&gt;
+&lt;p&gt;Hacker là những người thực hiện xâm nhập và tác động vào hệ thống mạng nhằm một mục đích nào đó. Không như trên phim, hacker vẫn có thể là người tốt (nhưng vẫn ngầu nhé). &lt;strong&gt;Và dưới đây sẽ là phân loại hacker (hoặc không) phổ biến hiện nay&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;script-kiddle&#34;&gt;Script Kiddle&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/page/hacker/1.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;574&#34;
+	srcset=&#34;/page/hacker/1_hu3daaedcdcec19a1c2a3c4e919c617af4_369473_480x0_resize_box_3.png 480w, /page/hacker/1_hu3daaedcdcec19a1c2a3c4e919c617af4_369473_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Script Kiddie&lt;/strong&gt; chỉ những người không có trình độ chuyên môn nhưng biết cách sử dụng những đoạn mã mà người khác đã tạo ra hoặc phần mềm khai thác có sẵn để hack, đây gọi là không làm mà đòi có ăn đấy :3&lt;/p&gt;
+&lt;p&gt;Vậy nên Script Kiddie cũng không được giới hacking tôn trọng. Những người này trình độ còn kém mà hay thích thể hiện (ngu còn tỏ ra nguy hiểm). Họ thậm chí còn dùng nhiều thủ đoạn để hạ người khác xuống và nâng mình lên (rất bẩn).&lt;/p&gt;
+&lt;h4 id=&#34;neophyte--tân-binh&#34;&gt;Neophyte – tân binh&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Neophyte&lt;/strong&gt; hay còn gọi là tân binh, newbie, là những người mới bắt đầu tìm hiểu về hacking. Tân binh thường chưa có nhiều kiến thức, kỹ năng cũng như kinh nghiệm về bảo mật.&lt;/p&gt;
+&lt;h4 id=&#34;hacker-mũ-trắng&#34;&gt;Hacker mũ trắng&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Hacker mũ trắng&lt;/strong&gt; là những người có đạo đức. Bởi mục đích của họ không phải là tấn công trái phép vào một website hay một hệ thống mạng. Họ xâm nhập vào hệ thống là để pentest (tấn công kiểm thử) nhằm tìm ra những lỗ hổng bảo mật, những rủi ro đang đe dọa doanh nghiệp. Dựa vào đó, doanh nghiệp mới có thể xử lý và khắc phục kịp thời, ngăn chặn các cuộc tấn công thực sự xảy ra.&lt;/p&gt;
+&lt;p&gt;Hầu hết &lt;strong&gt;hacker mũ trắng&lt;/strong&gt; đều có bằng đại học về công nghệ thông tin hoặc an toàn thông tin. Đặc biệt, một số người còn có cả những chứng chỉ IT quan trọng.&lt;/p&gt;
+&lt;h4 id=&#34;hacker-mũ-đen&#34;&gt;Hacker mũ đen&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Hacker mũ đen&lt;/strong&gt; - những kẻ bẻ khóa (crackers). Họ truy cập trái phép vào các hệ thống như website, thiết bị hay mạng nội bộ nhằm thực hiện các mục đích xấu. Có thể kể đến các hành vi như: nghe lén, đánh cắp dữ liệu, tống tiền nạn nhân hay phá hoại hạ tầng mạng (Nói chung là phá vcl).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/page/hacker/2.png&#34;
+	width=&#34;1010&#34;
+	height=&#34;506&#34;
+	srcset=&#34;/page/hacker/2_huf748c4b1d01493bd86b0b4056c9fe48e_133208_480x0_resize_box_3.png 480w, /page/hacker/2_huf748c4b1d01493bd86b0b4056c9fe48e_133208_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;199&#34;
+		data-flex-basis=&#34;479px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;hacker-mũ-xám&#34;&gt;Hacker mũ xám&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Hacker mũ xám&lt;/strong&gt; là sự kết hợp giữa hacker mũ trắng và hacker mũ đen. Thông thường, họ sẽ tìm kiếm các lỗ hổng trong hệ thống mạng mà không có sự cho phép của chủ sở hữu. Nếu phát hiện ra, họ sẽ thông báo cho chủ sở hữu, có thể đi kèm yêu cầu về một khoản phí nhỏ để khắc phục lỗ hổng đó. Nếu chủ sở hữu không đáp ứng yêu cầu, họ sẽ đưa các thông tin liên quan đến lỗ hổng lên mạng xã hội.&lt;/p&gt;
+&lt;p&gt;Trên thực tế, &lt;strong&gt;hacker mũ xám&lt;/strong&gt; không nguy hiểm. Họ đơn thuần chỉ là tò mò, muốn tự học thêm kỹ năng mới trong việc hacking. Tuy nhiên, đôi khi, họ có thể trở thành tội phạm mạng từ những hành động trái phép như vậy.&lt;/p&gt;
+&lt;h4 id=&#34;hacker-mũ-xanh&#34;&gt;Hacker mũ xanh&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Hacker mũ xanh&lt;/strong&gt; thường là những người đi tìm lỗi, lỗ hổng bảo mật hoặc nguy cơ tấn công trước khi một sản phẩm công nghệ được ra mắt. Nếu phát hiện có lỗ hổng, họ sẽ cố gắng vá/ sửa nó trong thời gian sớm nhất. (Xanh lá nhưng không bị xa lánh :3)&lt;/p&gt;
+&lt;h4 id=&#34;hacker-mũ-đỏ&#34;&gt;Hacker mũ đỏ&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Hacker mũ đỏ&lt;/strong&gt; là những người tuyệt vời trong thế giới hacking. Họ thậm chí còn được đánh giá cao hơn hacker mũ trắng. Lý do là vì khi gặp nguy hiểm, họ sẽ tắt máy tính, upload 1 tệp hoặc file virus rồi mở lại máy tính và thực hiện tiêu diệt mã độc từ bên trong.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lói chung là các hacker hoạt động với mục đích xấu vẫn là mối đe dọa khôn lường với các tổ chức, doanh nghiệp. Muốn không bị hack thì nên thuê hacker tốt + xịn về gánh :3&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Admin</title>
+        <link>/page/about/</link>
         <pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://iamironman1233.github.io/page/about/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/lo6kGYr.png&#34;
+        <guid>/page/about/</guid>
+        <description>&lt;h3 id=&#34;thông-tin-chi-tiết-về-admin&#34;&gt;Thông tin chi tiết về admin&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/page/about/image.png&#34;
+	width=&#34;679&#34;
+	height=&#34;772&#34;
+	srcset=&#34;/page/about/image_hudb38921b71ca6327cd1307efbdeafe2f_460772_480x0_resize_box_3.png 480w, /page/about/image_hudb38921b71ca6327cd1307efbdeafe2f_460772_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;211px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Mình là Thái Sơn, khoá 66 ngành Kỹ thuật máy tính (IT2), HUST.&lt;/p&gt;
+&lt;p&gt;Spid3r là username của mình trong Discord cũng như các cuộc thi CTF (Capture the Flag)&lt;/p&gt;
+&lt;p&gt;Thảo mai vậy đủ rồi, chứ nhìn avatar là biết thằng admin học trường nào, thật tội nghiệp. Nhưng ít nhất nó còn may mắn hơn fan MU - đáy xã hội, nên nó tự nhủ luôn luôn cố gắng để đạt được những thành tựu mà nó mơ ước.&lt;/p&gt;
+&lt;p&gt;Dự định từ bây giờ là hoàn thành &lt;a class=&#34;link&#34; href=&#34;https://drive.google.com/file/d/1RdjMXx7NQnY9NHebjYs72J1tclLEIUuJ/view&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;300 bài code thiếu nhi&lt;/a&gt; của idol wibu mà mình kính trọng.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt; blog của mình ném ở đây cho đồng chí nào cần tham khảo nhé! –&amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/iamironman1233/iamironman1233.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Source code của Sondeptraivler&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;P/s: Mình còn là thành viên của 2 CLB &lt;a class=&#34;link&#34; href=&#34;https://www.facebook.com/atttbkhn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BKSec&lt;/a&gt; &amp;amp; &lt;a class=&#34;link&#34; href=&#34;https://www.facebook.com/SINNOclub&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SOICT Innovation Club (SINNO)&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-ngôn-ngữ-và-tools-thường-sử-dụng&#34;&gt;👨‍💻 Ngôn ngữ và Tools thường sử dụng&lt;/h3&gt;
+&lt;h4 id=&#34;ngôn-ngữ&#34;&gt;Ngôn ngữ:&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/https:/img.shields.io/badge/-C-1572B6?style=flat&amp;amp;logo=c&amp;amp;logoColor=white&#34;
 	
 	
 	
 	loading=&#34;lazy&#34;
 	
+		alt=&#34;C&#34;
+	
+	
+&gt; 
+&lt;img src=&#34;/https:/img.shields.io/badge/-C&amp;#43;&amp;#43;-1572B6?style=flat&amp;amp;logo=c%2B%2B&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;CPP&#34;
+	
+	
+&gt; 
+&lt;img src=&#34;/https:/img.shields.io/badge/-C%23-purple?style=flat&amp;amp;logo=csharp&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Csharp&#34;
+	
+	
+&gt; 
+&lt;img src=&#34;/https:/img.shields.io/badge/-HTML5-E34F26?style=flat&amp;amp;logo=html5&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;HTML5&#34;
+	
+	
+&gt; 
+&lt;img src=&#34;/https:/img.shields.io/badge/-CSS3-1572B6?style=flat&amp;amp;logo=css3&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;CSS3&#34;
+	
+	
+&gt; 
+&lt;img src=&#34;/https:/img.shields.io/badge/-JavaScript-black?style=flat&amp;amp;logo=javascript&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;JavaScript&#34;
+	
+	
+&gt; 
+&lt;img src=&#34;/https:/img.shields.io/badge/-Bootstrap-563D7C?style=flat&amp;amp;logo=bootstrap&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Bootstrap&#34;
+	
+	
+&gt; 
+&lt;img src=&#34;/https:/img.shields.io/badge/-python-blue?style=flat&amp;amp;logo=python&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Python&#34;
+	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;Xin chào, mình là &lt;strong&gt;Đinh Thái Sơn&lt;/strong&gt; hiện tại đang học khoá 66 ngành Kỹ thuật máy tính, HUST&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Spid3r&lt;/strong&gt; là username của mình trong Discord cũng như các cuộc thi CTF.&lt;/p&gt;
-&lt;p&gt;Thảo mai vậy đủ rồi, chứ nhìn avatar là biết thằng admin học trường nào, thật tội nghiệp.
-Nhưng ít nhất nó còn may mắn hơn fan MU - đáy xã hội, nên nó tự nhủ luôn luôn cố gắng để đạt được những thành tựu mà nó mơ ước.&lt;/p&gt;
-&lt;p&gt;Dự định trong năm 2022 là hoàn thành &lt;a class=&#34;link&#34; href=&#34;https://drive.google.com/file/d/1RdjMXx7NQnY9NHebjYs72J1tclLEIUuJ/view&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;300 bài code thiếu nhi&lt;/a&gt; (không xong thì năm sau làm)&lt;/p&gt;
+&lt;h4 id=&#34;tools&#34;&gt;Tools:&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;/https:/img.shields.io/badge/-Git-black?style=flat&amp;amp;logo=git&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Git&#34;
+	
+	
+&gt;  &lt;img src=&#34;/https:/img.shields.io/badge/-Github-black?style=flat&amp;amp;logo=github&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Github&#34;
+	
+	
+&gt;  &lt;img src=&#34;/https:/img.shields.io/badge/-Bitbucket-blue?style=flat&amp;amp;logo=bitbucket&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Bitbucket&#34;
+	
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
+        <title>Archives</title>
+        <link>/page/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>/page/archives/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Search</title>
-        <link>https://iamironman1233.github.io/page/search/</link>
+        <link>/page/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://iamironman1233.github.io/page/search/</guid>
+        <guid>/page/search/</guid>
         <description></description>
         </item>
         

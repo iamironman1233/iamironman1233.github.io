@@ -2,40 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://iamironman1233.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2022-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/page/hacker/</loc>
+    <loc>/page/hacker/</loc>
     <lastmod>2022-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/page/</loc>
+    <loc>/page/</loc>
     <lastmod>2022-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/post/cyberdefenders-wiredive/</loc>
+    <loc>/post/cyberdefender_widedive/</loc>
     <lastmod>2022-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2022-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/post/1trieupasswifi/</loc>
-    <lastmod>2022-06-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://iamironman1233.github.io/post/whitehat-play-11/</loc>
+    <loc>/post/whitehat-play-11/</loc>
     <lastmod>2022-06-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/page/about/</loc>
+    <loc>/page/about/</loc>
     <lastmod>2022-06-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/post/access-denined-ctf-2022/</loc>
+    <loc>/post/access_denied_2022_ctf/</loc>
     <lastmod>2022-06-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/post/tinhocdaicuong/</loc>
+    <loc>/post/1milionspass/</loc>
     <lastmod>2022-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/categories/</loc>
+    <loc>/post/thuchanhtindaicuong/</loc>
+    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/page/search/</loc>
+    <loc>/page/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iamironman1233.github.io/tags/</loc>
+    <loc>/categories/test/</loc>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
+    <loc>/page/search/</loc>
+  </url><url>
+    <loc>/tags/</loc>
   </url>
 </urlset>
