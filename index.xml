@@ -589,15 +589,15 @@
         <guid>/page/about/</guid>
         <description>&lt;h3 id=&#34;thông-tin-chi-tiết-về-admin&#34;&gt;Thông tin chi tiết về admin&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;/page/about/image.png&#34;
-	width=&#34;679&#34;
-	height=&#34;772&#34;
-	srcset=&#34;/page/about/image_hudb38921b71ca6327cd1307efbdeafe2f_460772_480x0_resize_box_3.png 480w, /page/about/image_hudb38921b71ca6327cd1307efbdeafe2f_460772_1024x0_resize_box_3.png 1024w&#34;
+	width=&#34;1871&#34;
+	height=&#34;1870&#34;
+	srcset=&#34;/page/about/image_hue3d1a693443b121f5bd0712badeeac36_621633_480x0_resize_box_3.png 480w, /page/about/image_hue3d1a693443b121f5bd0712badeeac36_621633_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;87&#34;
-		data-flex-basis=&#34;211px&#34;
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Mình là Thái Sơn, khoá 66 ngành Kỹ thuật máy tính (IT2), HUST.&lt;/p&gt;
